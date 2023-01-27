@@ -13,11 +13,11 @@ So that I can find my fur-ever friend.
 
 ## ACCEPTANCE CRITERIA
 
-GIVEN a location
-WHEN I choose a cat or dog
-THEN I am taken to the available pets
-WHEN I choose a pet
-THEN I am taken to the pet profile
+GIVEN a location  
+WHEN I choose a cat or dog  
+THEN I am taken to the available pets  
+WHEN I choose a pet  
+THEN I am taken to the pet profile  
 
 ## Wireframe or Sketch of the Design (yasmin) - 
 
