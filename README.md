@@ -1,7 +1,8 @@
 ## Paw_Power
 
 ## PROJECT DESCRIPTION
-As a potential pet owner I would like to search for available pets for adoption near a selected location.
+As a potential pet owner   
+I would like to search for available pets for adoption near a selected location.
 
 ## USER STORY 
 
