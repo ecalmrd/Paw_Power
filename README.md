@@ -5,10 +5,8 @@ As a potential pet owner I would like to search for available pets for adoption 
 
 ## USER STORY 
 
-As a potential pet owner.
-
-I would like a web application where I can look at adopatable pets
-
+As a potential pet owner.  
+I would like a web application where I can look at adopatable pets  
 So that I can find my fur-ever friend.
 
 ## ACCEPTANCE CRITERIA
