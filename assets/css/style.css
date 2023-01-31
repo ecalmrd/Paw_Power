@@ -1,3 +1,7 @@
+*{
+  background-color: rgb(212, 101, 212)    
+}
+
 .bulma-overlay-mixin {
     @include overlay(1.5rem);
     background-color: rgb(233, 228, 223);
@@ -11,5 +15,10 @@
 
 .nav li {
     display: inline;
-    text-align: center;
+    text-align: center;    
+}
+
+h1{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: white;
 }
