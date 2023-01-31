@@ -1,0 +1,15 @@
+.bulma-overlay-mixin {
+    @include overlay(1.5rem);
+    background-color: rgb(233, 228, 223);
+    border-radius: 0.25em;
+    color: white;
+    opacity: 0.9;
+    padding: 1em;
+  }
+
+
+
+.nav li {
+    display: inline;
+    text-align: center;
+}
