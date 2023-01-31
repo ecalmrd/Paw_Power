@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"/>     
+    <link rel="stylesheet" href="./assets/css/style.css"/>    
+    <title>Index</title>
+</head>
+<header>
+  <!-- navbar start -->
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="https://bulma.io">
+            <figure class="image is-48x48"><img src="./assets/imgs/paw.png"></figure>
+          </a>
+      
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+      
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item">
+               <h1>Paw Power</h1>
+            </a>
+          </div>
+      
+          <div class="navbar-end">
+            <div class="navbar-item">
+                <input class="input" type="text" placeholder="Enter a Location">
+              <div class="buttons">
+                <a class="button is-primary">
+                  <strong>Search</strong>
+                </a>                
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+  <!-- navbar end -->
+</header>
+<body>
+    
+    <div class="columns is-centered">     
+        <nav class="breadcrumb is-centered" aria-label="breadcrumbs">
+        <div class="column">
+            <div class="box">
+                <figure class="image">
+                    <img src="./assets/imgs/landscape.jpg">
+                </figure> 
+            </div>
+        </div>        
+        </nav>   
+    </div>
+    <div class="columns is-centered"> 
+    <h1 class= "has-text-centered">Please Make a Selection</h1> 
+    </div> 
+    <div class="columns">
+      
+        <div class="column">          
+            <div class="box">
+                <figure id = "cat" class="image is-2by3">
+                  <a href="./cat.html"><img src="./assets/imgs/cat.jpg"></a>
+                </figure>     
+            </div>
+        <h1 class="has-text-centered">Cats</h1>
+        </div>
+        <div class="column">
+            <div class="box">
+                <figure id = "dog" class="image is-2by3">
+                  <a href="./dog.html"><img src="./assets/imgs/dog.jpg"></a>
+                </figure>               
+            </div>
+            <h1 class="has-text-centered">Dogs</h1>
+        </div>
+        <div class="column">
+            <div class="box">
+                <figure id = "pets" class="image is-2by3">
+                    <a href="./profilePet.html"><img src="./assets/imgs/catdog.jpg"></a>
+                </figure>  
+            </div>
+        <h1 class="has-text-centered">Pets</h1>
+        </div>
+    </div>
+
+
+</body>
+<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="./assets/js/script.js"></script>
+</html>
