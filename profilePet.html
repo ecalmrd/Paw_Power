@@ -8,62 +8,93 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap" />   
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"/> 
-    <link rel="stylesheet" href="./assets/css/style-r.css"/>
+    <link rel="stylesheet" href="./assets/css/style-e.css"/>
 </head>
 
 <body>
+<!---------------------------- Navigation Bar ---------------------------->
+    <header class="main-header">
+        <img class="logo" src="images/paw-print.png" alt="home">
+        <nav>        
+            <ul class="tabs is-right">
+                <li><a href="dog.html" class="hover-underline-animation">Dog care</a></li>
+                <li><a href="cat.html" class="hover-underline-animation"> Cat care</a></li>
+                <li><a href="contact.html" class="hover-underline-animation">Contact</a></li>
+                <li><a href="likes.html"class="hover-underline-animation">💟 </a></li>
+            </ul>
+        </nav>
+    </header>
 
-<div class="container is-fluid">  
-    <div class="notification is-primary">
-    <div class="content is-medium">
-        <div class="bulma-overlay-mixin-parent">
-            <div class="bulma-overlay-mixin">
-                <h2>Pet Name Here</h2>
-            </div>
-                <div class="bulma-center-mixin-parent">
-                    <figure class="image is-128x128">
-                        <img class="is-rounded bulma-center-mixin" height="96" width="96" src="https://i.pinimg.com/564x/da/b7/38/dab73866272e40a81449617dc96bf58e.jpg">
-                    </figure>
+<!---------------------------- Main Profile Picture Section ---------------------------->
+<div class="container is-fluid is-full">  
+    <div class="has-background-white content is-large has-text-centered">
+                <h2 class="petname pt-4 mt-4 mb-4">Pet Name Here</h2>
+                <div class="profilePIC">
+                    <img class="imgCSS " src="https://i.pinimg.com/564x/da/b7/38/dab73866272e40a81449617dc96bf58e.jpg">
+                        <div class="container imgBtnContainer">
+                        <button class="imgBtn button is-outlined is-primary is-medium is-responsive is-rounded tabs is-centered "> Previous </button>
+                        <button class="imgBtn button is-outlined is-link is-medium is-responsive is-rounded tabs is-centered"> Next  </button>
+                        </div> 
                 </div>
-        </div>
-        
-        <ul class = "nav li">
-            <li class> Breed and Location </li>
-            <li> Age </li>
-            <li> Gender </li>
-            <li> Color</li>
-        </div>
+
+<!----------------------------- Secondary Profile Picture Info ---------------------------->   
+            <div class = "container">
+                <ul class="tabs is-centered"> <!--append child here in JS-->
+                    <li> Breed</li>
+                    <li> Age </li>
+                    <li> Gender </li>
+                    <li> Color</li>
+                    <li> Location</li>
+            </div>
     </div>
-</div>     
-  
-<div class="container is-fluid"> 
+</div>
+
+<!----------------------------- About Me links ---------------------------->
+<section class="section py-4"> 
     <div class="notification is-secondary">
         <div class="content is-medium">
-            <nav class ="navbar">        
-                <ul class = "nav li">
-                    <li> <a href="#About">About </a> </li>
-                    <li> <a href="#Story">Story </a> </li>
-                    <li> <a href="#Organization">Organization </a> </li>
+            <nav class="navbar">        
+                <ul class="tabs is-centered">
+                    <li> <a href="#About" class="hover-underline-animation">About </a> </li>
+                    <li> <a href="#Breed" class="hover-underline-animation">Breed </a>  </li>
+                    <li> <a href="#Organization" class="hover-underline-animation">Organization </a> </li>
+                    <li> <a href="#Contact" class="hover-underline-animation">Contact </a> </li>
                 </ul> 
             </nav>
         </div>
     </div>
-</div>
 
-<div class="container is-fluid"> 
-    <div class="notification is-secondary">
+<!----------------------------- About Me Details ---------------------------->
+
+    <div class="notification is-secondary" >
         <div class="content is-medium">
-            <h2>About</h2>
-                <h3>Coat Length</h3>
-                <h3>House-Trained</h3>
-                <h3>Health </h3>
+            <div id="story"> Story  <!--use appendChild to p via JS to take information from story of animal -->
+                <p> Story about dog here. </p> 
+            </div>
+            <!-- might remove these. we might not need the extra information -->
+            <div id="breed">Breed </div>
+            <div id="age">Age </div>
+            <div id="gender">Gender</div>   
+            <div id="color">Color </div>    
         </div>
     </div>
-</div>
+</section>
+
+<!----------------------------- Organization ---------------------------->
+<section class="section pt-4"> 
+    <div class="notification is-secondary" >
+        <div class="content is-medium has-text-centered">
+            <h3> Organization & Contact Information </h3> <!--append google maps-->
+
 
     
 
+        </div>    
+    </div>
+</section>
+
+    
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="script.js"></script>    
+<script src="./assets/js/eugeneScript.js"></script>    
 </body>
 </html>
