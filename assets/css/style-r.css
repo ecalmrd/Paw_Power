@@ -1,117 +1,247 @@
 
-/* global css starts */
-:root{
-	--bg-color: rgb(255, 221, 226);	 
-	--primary-color: #6c63ff;
-    --secondary-color: green;
-    --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-    --font:'Karla', sans-serif;
-	--dark-color: rgb(43, 40, 40);		
-}
-
-
-* {
-	box-sizing: border-box;
-	background-color:(--bg-color)
-}
-/* global css ends */
-
-body {
-	font-family: (--font);
-	line-height: 1.6;
-	margin: 0;
-	min-height: 100vh;
-}
-
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-
-.bulma-overlay-mixin {
-    @include overlay(1.5rem);
-    background-color: (--bg-color);
-    border-radius: 0.25em;
-    color: white;
-    opacity: 0.9;
-    padding: 1em;
+/* START OF CODE FROM THE NAVBAR NOTE SOME CODE MAY NOT BE RELEVANT SO LOOK INTO FOR CLEAN UP*/
+  .navigation-links {
+  display: flex;
+  justify-content: center;
   }
 
-  .nav li {
-    display: inline;
-    text-align: center;    
+  .navigation-links a {
+  margin: 20px;
+  background-color: 	#50C878;
+  border-radius: 100px;
+  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+  color:white;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  }
+
+  .navigation-links a:hover {
+  box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+  }
+  ul li{
+  display: inline-block;
+  padding: 0px 15px;
+
+  }
+
+  .logo{
+  width: 50px;
+  cursor: pointer;
+  }
+
+  .hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: black;
+  font-size: 18px;
+  font-family: var(--font-family);
+
+  }
+
+  .hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  transform: scaleX(0);
+  transform-origin: top left;
+  transition: transform 0.3s ease;
+
+  }
+
+  .hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+  }
+
+  a {
+  text-decoration: none;
+  color: inherit;
+  line-height: 1;
+  }
+
+  .main-header{
+  background-color: #9f9be8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:1% 8%;
+  height: 90px;} 
+
+  @media screen and (max-width: 1050px){
+  .main-header{
+  padding: 1% 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  }
+
+  .hover-underline-animation{
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  }
+  .homepage{
+  margin-top: 400px;
+
+  }
+  .logo{
+  display:none;
+  }
+
+
+      
+  .navigation-links{
+  line-height: 100px;
+  }
+  .contact-container{
+  display: none;
+  }
+  h1{
+  font-size: 50px;
+
+  }
+  h3{
+  font-size: 25px;
+  }
+  }
+
+/* END OF CODE FROM THE NAVBAR */
+
+
+/* START OF CODE FROM THE CAROUSEL */
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
 }
 
-h2,
-h3,
-a {
-	color: #34495e;
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
 }
 
-a {
-	text-decoration: none;
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
 }
 
-.logo {
-	margin: 0;
-	font-size: 1.45em;
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
 }
 
-.main-nav {
-	margin-top: 5px;
-}
-.logo a,
-.main-nav a {
-	padding: 10px 15px;
-	text-transform: uppercase;
-	text-align: center;
-	display: block;
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
 }
 
-.main-nav a {
-	color: #34495e;
-	font-size: .99em;
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
 }
 
-.main-nav a:hover {
-	color: #718daa;
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
 }
 
-.header {
-	padding-top: .5em;
-	padding-bottom: .5em;
-	border: 1px solid #a2a2a2;
-	background-color: #f4f4f4;
-	-webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
-	-moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
-	box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
+
+.active, .dot:hover {
+  background-color: #717171;
 }
 
-@media (min-width: 769px) {
-	.header,
-	.main-nav {
-		display: flex;
-	}
-	.header {
-		flex-direction: column;
-		align-items: center;
-    	.header{
-		width: 80%;
-		margin: 0 auto;
-		max-width: 1150px;
-	}
-}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
 }
 
-@media (min-width: 1025px) {
-	.header {
-		flex-direction: row;
-		justify-content: space-between;
-	}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
 }
+
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+/* END OF CODE FROM THE CAROUSEL */
+#big-box-title{
+    background: #E6DBac;
+    color:black;
+}
+#big-box {
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+#small-box {
+    border-radius: 25px;
+  background: #E6DBac;
+
+}
+
+
+
+
