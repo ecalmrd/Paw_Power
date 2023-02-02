@@ -12,7 +12,7 @@
 </head>
 
 <body>
-<!---------------------------- Navigation Bar ---------------------------->
+<!---------------------------- Main Navigation Bar ---------------------------->
     <header class="main-header">
         <img class="logo" src="images/paw-print.png" alt="home">
         <nav>        
@@ -37,7 +37,7 @@
                         </div> 
                 </div>
 
-<!----------------------------- Secondary Profile Picture Info ---------------------------->   
+<!-----------------------------  Pet Information ---------------------------->   
             <div class = "container">
                 <ul class="tabs is-centered"> <!--append child here in JS-->
                     <li> Breed</li>
@@ -49,7 +49,7 @@
     </div>
 </div>
 
-<!----------------------------- About Me links ---------------------------->
+<!----------------------------- Sub-Navbar ---------------------------->
 <section class="section py-4"> 
     <div class="notification is-secondary">
         <div class="content is-medium">
@@ -64,32 +64,29 @@
         </div>
     </div>
 
-<!----------------------------- About Me Details ---------------------------->
-
+<!----------------------------- Story Detail Section ---------------------------->
     <div class="notification is-secondary" >
         <div class="content is-medium">
-            <div id="story"> Story  <!--use appendChild to p via JS to take information from story of animal -->
-                <p> Story about dog here. </p> 
-            </div>
-            <!-- might remove these. we might not need the extra information -->
-            <div id="breed">Breed </div>
-            <div id="age">Age </div>
-            <div id="gender">Gender</div>   
-            <div id="color">Color </div>    
+            <h3 id="story"> Story </h3> <!--use appendChild to p via JS to take information from story of animal -->
+                <p> Story about pet here. </p> 
+            </div>  
         </div>
     </div>
 </section>
 
 <!----------------------------- Organization ---------------------------->
-<section class="section pt-4"> 
+<section class="section pt-1"> 
     <div class="notification is-secondary" >
         <div class="content is-medium has-text-centered">
             <h3> Organization & Contact Information </h3> <!--append google maps-->
-
-
-    
-
-        </div>    
+            <div class="columns">
+                <div class="column">
+                    <p class="organizationMap"> Google Map here </p>
+                </div>
+                <div class="column">
+                    <p class="contactinfo"> Contact info here </p>
+                </div>
+            </div>    
     </div>
 </section>
 
