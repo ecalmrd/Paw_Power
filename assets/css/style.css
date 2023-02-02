@@ -38,7 +38,6 @@
   font-size: 40px;
   opacity: 0.9;
   font-family:var(--font-family)
-
   }
 
 
@@ -259,6 +258,20 @@
     bottom: 15px;
   }
   
+  .has-image-centered {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .mac{
+    font-family:(--font);	
+    font-size: 35px;
+    color: (--dark-color);  
+  }
+  
+  .mac:hover{
+    text-shadow:1px 1px 2px #101113;
+  }
   
   /* mobile phones */
   @media (max-width:480px){
