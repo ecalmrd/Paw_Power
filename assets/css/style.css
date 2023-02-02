@@ -250,7 +250,27 @@
 
   }
 
-
+  .quote{
+    font-family: 'Caveat', cursive;
+    font-style: italic;
+    font-size: 30px;
+    color: black;
+    position: absolute; 
+    bottom: 15px;
+  }
+  
+  
+  /* mobile phones */
+  @media (max-width:480px){
+    #mobile {
+      display: block;
+    }
+  
+    #buttons {
+      width: 100%;
+    }
+  
+  }
 
 
 
