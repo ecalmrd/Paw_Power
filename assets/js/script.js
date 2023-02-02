@@ -27,7 +27,7 @@
 // Create add event listeners for adopting cat or dog
 $('#catbutton').on("click", function(e) {
     console.log('I choose cats!')
-    chooseCat();
+    // chooseCat();
 });
 // Choosing a cat will display all cats
 function chooseCat(){
@@ -37,7 +37,7 @@ function chooseCat(){
 // Choosing a dog will display all dogs
 $('#dogbutton').on("click", function(e) { 
     console.log('I choose dogs!')
-    chooseDog();
+    // chooseDog();
 });
 
 function chooseDog(){ 
@@ -47,7 +47,7 @@ function chooseDog(){
 // optional: browse both cats and dogs
 $('#petbutton').on("click", function(e) { 
     console.log('Surprise me!')
-    choosepet();
+    // choosepet();
 });
 
 function choosePet(){ 

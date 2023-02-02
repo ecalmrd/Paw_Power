@@ -254,13 +254,33 @@
     font-style: italic;
     font-size: 30px;
     color: black;
-    position: absolute; 
-    bottom: 15px;
   }
-  
+
   .has-image-centered {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  #catbutton:hover{
+    box-shadow: 5px 5px 15px rgb(19, 1, 19);
+    border-radius: 10px;
+    border-style: solid;
+    border: 1px;
+
+  }
+
+  #dogbutton:hover{
+    box-shadow: 5px 5px 15px rgb(19, 1, 19);
+    border-radius: 10px;
+    border-style: solid;
+    border: 1px;
+  }
+
+  #petbutton:hover{
+    box-shadow: 5px 5px 15px rgb(19, 1, 19);
+    border-radius: 10px;
+    border-style: solid;
+    border: 1px;
   }
 
   .mac{
@@ -320,6 +340,10 @@
   display:none;
   }
 
+  .app{
+    position: fixed;
+    left: 0px;
+  }
 
       
   .navigation-links{
