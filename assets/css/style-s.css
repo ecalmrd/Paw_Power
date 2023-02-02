@@ -1,0 +1,61 @@
+
+/* global css starts */
+:root{
+	--bg-color: rgb(255, 221, 226);	 
+	--primary-color: #6c63ff;
+    --secondary-color: green;
+    --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    --font:'Karla', sans-serif;
+	--dark-color: rgb(43, 40, 40);		
+}
+
+
+* {
+	box-sizing: border-box;
+	background-color:(--bg-color)
+}
+/* global css ends */
+
+.navbar{
+	background-color: #6c63ff
+}
+
+
+.fancy{
+	font-family:(--font);
+	font-size: 45px;
+	color: white;  
+}
+
+.mac{
+	font-family:(--font);	
+	font-size: 35px;
+	color: (--dark-color);  
+}
+
+.mac:hover{
+	text-shadow:1px 1px 2px #101113;
+}
+
+.quote{
+	font-family: 'Caveat', cursive;
+	font-style: italic;
+	font-size: 30px;
+	color: black;
+	position: absolute; 
+	bottom: 15px;
+}
+
+
+/* mobile phones */
+@media (max-width:480px){
+	#mobile {
+		display: block;
+	}
+
+	#buttons {
+		width: 100%;
+	}
+
+}
+
