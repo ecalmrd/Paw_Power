@@ -43,12 +43,19 @@
 	font-size: 30px;
 	color: black;
 	position: absolute; 
-	bottom: 10px;
+	bottom: 15px;
 }
 
-@media (min-width: 1025px) {
-	.header {
-		flex-direction: row;
-		justify-content: space-between;
+
+/* mobile phones */
+@media (max-width:480px){
+	#mobile {
+		display: block;
 	}
+
+	#buttons {
+		width: 100%;
+	}
+
 }
+
