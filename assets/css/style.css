@@ -287,11 +287,11 @@
     font-family:(--font);	
     font-size: 35px;
     color: (--dark-color);  
-  }
-  
-  .mac:hover{
-    text-shadow:1px 1px 2px #101113;
-  }
+  }  
+#desc-1, #desc-2, #desc-3, #desc-4, #desc-5, #desc-6{
+  word-wrap: break-word;
+}
+
   
   /* mobile phones */
   @media (max-width:480px){
