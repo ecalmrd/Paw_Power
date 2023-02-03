@@ -229,7 +229,7 @@ img {vertical-align: middle;}
 }
 /* END OF CODE FROM THE CAROUSEL */
 #big-box-title{
-    background: #E6DBac;
+    background:white ;
     color:black;
 }
 #big-box {
@@ -237,9 +237,13 @@ img {vertical-align: middle;}
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 #small-box {
+  margin: 5vw;
+  padding: 1vw;
     border-radius: 25px;
-  background: #E6DBac;
-
+  background: #E6DBac; /*this is a placeholder color currently its an ugly yellow for testing purposes*/
+  width: 20vw;
+  height: 22vw;
+  text-align: center;
 }
 
 

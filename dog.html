@@ -4,9 +4,68 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dog</title>
+    <title>🐾Dog Care🐾</title>
+    <link rel="stylesheet" href="assets/css/style-r.css">
 </head>
 <body>
-    Woof
+    <!-- SAMPLE NAVBAR -->
+    <header class="main-header">
+        <img class="logo" src="assets/imgs/dogbone.png" alt="home">
+        <nav>
+            <ul>
+                <li><a href="dog.html" class="hover-underline-animation">Dog care</a></li>
+                <li><a  href="cat.html" class="hover-underline-animation"> Cat care</a></li>
+                <li><a href="contact.html" class="hover-underline-animation">Contact</a></li>
+                <li><a href="likes.html"class="hover-underline-animation">💟 </a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- carousell of rotating pet images -->
+    <div class="slideshow-container">
+
+
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="assets/imgs/Dog highq 1.jpg" style="width:100%" >
+          <div class="text">Source Pexels.com</div>
+        </div>
+       
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="assets/imgs/Dog highq2.jpg" style="width:100%">
+          <div class="text">Source pexels.com</div>
+        </div>
+       
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="assets/imgs/Dog highq3.jpg" style="width:100%">
+          <div class="text">Source pexels.com</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext"></div>
+            <img src="assets/imgs/dog highq4.jpg" style="width:100%">
+            <div class="text">Source pexels.com</div>
+          </div>
+       
+        <a class="prev" onclick="plusSlides(-1)"></a>
+        <a class="next" onclick="plusSlides(1)"></a>
+       
+        </div>
+        <br>
+        <!-- Start of the area that the api will work its magic within-->
+<div class="container" id="big-box">
+    <div class="top" id="big-box-title">
+<h1 style="font-size: 40px;"><center><u> HELLO THIS IS SAMPLE TEXT AND A PLACEHOLDER</u></center></h1>
+    </div>
+    <div class="container" id="small-box">
+        <!-- ADD A PLACE FOR THE API TO PLUG IN AN IMAGE-->
+        <h2> CONTENT FROM THE API WILL BE PLUGGED IN HERE AT THE END</h2>
+
+    </div>
+</div>
+<script src="assets/js/script-r.js"></script>
 </body>
 </html>
