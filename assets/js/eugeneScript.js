@@ -1,3 +1,18 @@
+
+//googlemaps API variables
+var googlemapsAPI = "AIzaSyCTQVOisLUpvEpoW30CiZlKlPdNMUiX8J4";
+var googlemapsAddress
+var googlemapsURL = "https://www.google.com/maps/embed/v1/place?key=" + googlemapsAPI + "&q=" + googlemapsAddress;
+
+//petfinder API variables
+var petfinderAnimalsAPI = "https://api.petfinder.com/v2/animals";
+var petfinderBreedsAPI = "https://api.petfinder.com/v2/types/{type}/breeds"
+var petfinderOrgAPI = "https://api.petfinder.com/v2/organizations";
+
+//Pet Profile Page variables
+
+
+
 fetch('https://api.petfinder.com/v2/oauth2/token', {
     method: 'POST',
     headers: {
@@ -23,17 +38,10 @@ fetch('https://api.petfinder.com/v2/oauth2/token', {
     })
 })
 
+//this code will take animal characteristics from petfinder API 
+//and display in profile page
 
-// create search bar to add location
+function perCharacteristics() {
 
-//Pseudo Code for browsing pets apage
-// This page includes a location bar at top and how many miles within current location
 
-// Filter options to sort distance from nearest to farthest
-
-// Additional filters to include age, breed, color, size, gender, coat, etc
-
-// When browsing, each profile will display a picture of the pet and include basic information such as age, name, breed, and distance.
-
-// Each profile will have option to favorite a pet
-
+}

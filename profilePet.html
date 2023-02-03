@@ -28,7 +28,7 @@
 <!---------------------------- Main Profile Picture Section ---------------------------->
 <div class="container is-fluid is-full">  
     <div class="has-background-white content is-large has-text-centered">
-                <h2 class="petname pt-4 mt-4 mb-4">Pet Name Here</h2>
+                <h2 class="petname pt-4 mt-4 mb-4">Pet Name Here</h2> <!--append pet name in JS -->
                 <div class="profilePIC">
                     <img class="imgCSS " src="https://i.pinimg.com/564x/da/b7/38/dab73866272e40a81449617dc96bf58e.jpg">
                         <div class="container imgBtnContainer">
@@ -81,10 +81,18 @@
             <h3> Organization & Contact Information </h3> <!--append google maps-->
             <div class="columns">
                 <div class="column">
-                    <p class="organizationMap"> Google Map here </p>
+                    <iframe 
+                    width="600"
+                    height="450"
+                    style="border:0"
+                    loading="lazy"
+                    allowfullscreen
+                    referrerpolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCTQVOisLUpvEpoW30CiZlKlPdNMUiX8J4&q=">
+                    </iframe>
                 </div>
                 <div class="column">
-                    <p class="contactinfo"> Contact info here </p>
+                    <p class="contactinfo"> Organization's contact info here </p>
                 </div>
             </div>    
     </div>
