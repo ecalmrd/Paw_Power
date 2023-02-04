@@ -38,66 +38,83 @@
 </header>
 
   
-
-  <div class="homepage">
-  <div class="container">
-    <div class="row align-items-center">
-    
-      <div class="col-md-6">
-      
-        
-        <img src="images/adoptian.png" alt="animals" class="img-fluid rounded d-none d-md-block" />
-      </div>
-      <div class="col-md-6">
-        <h2 class="kitten">Odie and Garfield ⚤ </h2> 
-        <h3></h3>
-        <p>
-          We are both very friendly with other dogs, and also playful and energetic, said energy is sometimes used to bite shoes. We love eating, running, and jumping.
-
-        </p>
-        <div class="navigation-links">
-          <a href="" class="contact-link" title=" Odie and Garfield">Learn more</a>
-        </div>
-      </div>
+ <!-- this is where the browsing code will be -->
+ <section class="hero is-info is-small">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <p class="title">
+        Browse your pet of choice!!
+      </p>
+      <p class="subtitle">
+        we can put anything here 
+      </p>
     </div>
-    
-        <div class="row align-items-center">
-          
-      <div class="col-md-6">
-        <h2>Mittens ♀️ </h2>
-        <p>
-       Mittens is a sweet and very loving kitty. She loves naps and cuddles.
-        </p>
-        <div class="navigation-links">
-          <a href="" class="contact-link" title="mittens">mittens </a>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <img src="images/mittens.png" alt="kitty" class="img-fluid rounded d-none d-md-block" />
-      </div>
-    </div>
-    <div class="row align-items-center">
-    
-      <div class="col-md-6">
-        
-        <img src="images/black.png" alt="ming" class="img-fluid rounded d-none d-md-block" />
-      </div>
-      <div class="col-md-6">
-        <h2>Ming ♂</h2>
-        <p>
-          ming is a very grumpy cat
-        </p>
-        <div class="navigation-links">
-          <a href="#" class="contact-link" title=" ming">See more</a>
-          
-        </div>
-        </div>
-        
-              
-              </div>
-      </div>
-    </div>
-  
   </div>
+</section>
+<br>
+  <!-- this is the end of the browsing code  -->
+
+
+  <section>
+    <div id="slider">
+        <div class="card">
+            <div class="card-image">
+                <figure class="image is-16by9 is-covered">
+                    <img src="https://source.unsplash.com/random/1200x500" alt="" />
+                </figure>
+            </div>
+            <div class="card-content slider-text ">
+                <div class="is-size-5 box">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium cum blanditiis dolore
+                    aperiam reiciendis minima doloremque recusandae atque illum. Dolorum impedit aut facere,
+                    porro minus quia dignissimos minima. Iure, magni?
+                </div>
+            </div>
+        </div>
+        <div class="card ">
+            <div class="card-image">
+                <figure class="image is-16by9 is-covered">
+                    <img src="https://source.unsplash.com/random/1200x500" alt="" />
+                </figure>
+            </div>
+            <div class="card-content slider-text ">
+                <p class="is-size-5 box">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque facere inventore voluptate
+                    ad, ipsam, esse asperiores distinctio ipsum reprehenderit nostrum veniam debitis perferendis
+                    vero repellat earum commodi quaerat qui excepturi.
+                </p>
+            </div>
+        </div>
+        <div class="card ">
+            <div class="card-image">
+                <p class="image is-16by9 is-covered">
+                    <img src="https://source.unsplash.com/random/1300x500" alt="" />
+                </p>
+            </div>
+            <div class="card-content slider-text ">
+                <p class=" is-size-5 box">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam magni sint exercitationem
+                    libero nesciunt quo saepe, voluptates eaque. Iure itaque quam facere sit praesentium minus
+                    deserunt tenetur nemo assumenda asperiores?
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
+<script>
+    bulmaCarousel.attach('#slider', {
+        slidesToScroll: 1,
+        slidesToShow: 1,
+        infinite: true,
+        autoplay: true,
+    });
+</script>
+
+
+<script src="script.js"></script>
+
+ 
 </body>
 </html>
