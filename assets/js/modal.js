@@ -9,26 +9,26 @@ var animal;
 // Choosing a cat
 $('#catbutton').on("click", function (e) {  
   document.getElementById("location").style.display = 'block';
-  document.getElementById("type").innerHTML = "cat"
-  animal = cat;
-  console.log('I choose' + animal)  
+  animal = 'cat';
+  document.getElementById("type").innerHTML = animal  
+  console.log('I choose ' + animal)  
   chooseCat();
 });
 
 // Choosing a dog
 $('#dogbutton').on("click", function (e) { 
   document.getElementById("location").style.display = 'block';
-  document.getElementById("type").innerHTML = "dog"
-  animal = dog;
-  console.log('I choose' + animal)  
+  animal = 'dog';
+  document.getElementById("type").innerHTML = animal
+  console.log('I choose ' + animal)  
 });
 
 // Choosing a pet
 $('#petbutton').on("click", function (e) {
   document.getElementById("location").style.display = 'block';
-  document.getElementById("type").innerHTML = "pet"
-  animal = pet;
-  console.log('Surprise me!' + animal)
+  document.getElementById("type").innerHTML = animal
+  animal = 'pet';
+  console.log('Surprise me! ' + animal)
 });
 
 
@@ -121,41 +121,21 @@ document.addEventListener('DOMContentLoaded', () => {
 //location search
 $('#search').on("click", function (e) {
   let location = document.getElementById("coordinates").value;
-  let range = document.getElementById("miles").value;
-  console.log(pin + ' ' + range)
+  let range = document.getElementById("miles").value;  
+  scooby();
+  
 })
 
+//scooby snack
+function scooby(){
+let $items = $('#type, #coordinates, #miles')
+var obj = {}
+$items.each(function() {
+  obj[this.id] = $(this).val()
+})
 
-
-
-//location code
-var map;
-var service;
-var infowindow;
-var location;
-
-function initMap() {
-  var sydney = new google.maps.LatLng(-33.867, 151.195);
-
-  infowindow = new google.maps.InfoWindow();
-
-  map = new google.maps.Map(
-    document.getElementById('map'), { center: sydney, zoom: 15 });
-
-  var request = {
-    query: `${location}`,
-    fields: ['name', 'geometry'],
-  };
-
-  var service = new google.maps.places.PlacesService(map);
-
-  service.findPlaceFromQuery(request, function (results, status) {
-    if (status === google.maps.places.PlacesServiceStatus.OK) {
-      for (var i = 0; i < results.length; i++) {
-        createMarker(results[i]);
-      }
-      map.setCenter(results[0].geometry.location);
-    }
-  });
+console.log (JSON.stringify(obj, null, ' '))
 }
+
+  
 
