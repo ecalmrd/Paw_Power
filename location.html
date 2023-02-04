@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/location.css" />
+</head>
+
+<body>
+    <!-- choose a pet -->
+    <section>
+        <div class="columns is-centered">
+            <div class="column">
+                <h2>Looking to adopt a pet? Click below to get started!</h2>
+            </div>
+        </div>
+        </div>
+        <div class="columns is-centered">
+        </div>
+        <div id="buttons" class="columns">
+            <div class="column"></div>
+
+            <div id="catbutton" class="column is-one-quarter">
+                <div id = "innercat" class="box ">
+                    <div class="columns is-block ">
+                        <div class="column">
+                            <figure id="cat" class="image is-128x128 has-image-centered">
+                                <a href="#"><img src="./assets/imgs/cat.jpeg"></a>
+                                <!-- PC: Pixabay -->
+                            </figure>
+                        </div>
+                        <div class="column">
+                            <h1 class="has-text-centered mac">Cats</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="dogbutton" class="column is-one-quarter">
+                <div id = "innerdog" class="box">
+                    <div class="columns is-block">
+                        <div class="column">
+                            <figure id="dog" class="image is-128x128 has-image-centered">                                
+                                <a href="#"><img src="./assets/imgs/dog.png"></a>
+                                <!-- PC: Anna Shvets -->
+                            </figure>
+                        </div>
+                        <div class="column">
+                            <h1 class="has-text-centered mac">Dogs</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="petbutton" class="column is-one-quarter">
+                <div id = "innerpet" class="box">
+                    <div class="columns is-block">
+                        <div class="column">
+                            <figure id="pets" class="image is-128x128 has-image-centered">
+                                <a href="#"><img src="./assets/imgs/pet.jpg"></a>
+                            </figure>
+                        </div>
+                        <div class="column has-text-centered">
+                            <h1 class="has-text-centered mac">Pets</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column"></div>
+        </div>
+
+    </section>
+    <!-- choose a location -->
+    <section >
+        <div id="location" class="columns">
+            <div class="columns"></div>
+            <div class="columns">
+                <div class="column">So we're searching for <span id="type">pet</span>s!</div>
+            </div>
+            <div class="columns">
+                <div class="column">Where should we start looking?</div>
+            </div>
+            <div class="columns is-centered">
+                <div class="column is-one-quarter"></div>
+                <div class="column ">
+                    <button class="button js-modal-trigger is-primary" data-target="modal-js-example">
+                        Location
+                    </button>
+                </div>
+                <div class="column is-one-quarter"></div>
+            </div>
+        </div>
+      
+        
+
+
+        <div id="modal-js-example" class="modal">
+            <div class="modal-background"></div>
+
+            <div class="modal-content">
+                <div id="boop" class="box">
+                    <div class="columns"></div>
+                    <div class="column">
+                        <p>
+                            <label for="pin">Location:</label>
+                            <input type="text" id="coordinates" placeholder="Enter a location." name="place">
+                            <label for="range">Range:</label>
+                            <select name="distance" id="miles">
+                                <option value="10">10 miles</option>
+                                <option value="25">25 miles</option>
+                                <option value="50">50 miles</option>
+                                <option value="100">100 miles</option>
+                            </select>
+                        </p>
+                    </div>
+                    <div class="column"></div>
+
+                    <div class="column"></div>
+                    <div class="columns">
+                        <div class="column"></div>
+                        <div class="column is-one-fifth"><button id="search" class="button is-primary">Search</button></div>
+                        <div class="column"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+        </div>
+
+    </section>
+
+
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="./assets/js/modal.js"></script>
+</body>
+
+</html>
