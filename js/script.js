@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
 //location search
 $('#search').on("click", function (e) {
   let location = document.getElementById("coordinates").value;
-  let range = document.getElementById("miles").value;  
+  let range = document.getElementById("miles").value;    
   scooby();
   
 })
