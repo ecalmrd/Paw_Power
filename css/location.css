@@ -1,0 +1,66 @@
+:root {
+    --primary-color: #6c63ff;
+    --secondary-color: green;
+    --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    --font-family: 'Karla', sans-serif;
+    --bg-color: rgb(255, 221, 226);
+    --dark-color: rgb(43, 40, 40);
+}
+
+.box {
+    background-color: --bg-color;
+}
+
+#catbutton:hover,
+#dogbutton:hover,
+#petbutton:hover {
+    box-shadow: 5px 5px 15px rgb(19, 1, 19);
+    border-radius: 10px;
+    border-style: solid;
+    border: 1px;
+
+}
+
+#cat, #dog, #pets{
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#
+
+.mac {
+    font-family: (--font);
+    font-size: 35px;
+    color: (--dark-color);
+}
+
+#location {
+    background-color: (--primary-color);
+}
+
+#boop {
+    background-image: url("/imgs/boop.jpeg");
+    /* photo cred: Lum3n */
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 40vh;
+    overflow-y: hidden;
+}
+
+
+@media screen and (max-width: 770px) {
+
+    #catbutton,
+    #dogbutton,
+    #petbutton,{
+        display: inline-block;
+    }
+
+    #innercat,
+    #innerdog,
+    #innerpet {        
+        display: inline-flex;
+    }
+}
