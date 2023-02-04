@@ -7,11 +7,11 @@
     --dark-color: rgb(43, 40, 40);		
   }     
    
-    
+/*     
 * {
   box-sizing: border-box;
   background-color:(--bg-color)
-  }
+  } */
 
 
   
@@ -261,38 +261,7 @@
     margin-right: auto;
   }
 
-  #catbutton:hover{
-    box-shadow: 5px 5px 15px rgb(19, 1, 19);
-    border-radius: 10px;
-    border-style: solid;
-    border: 1px;
-
-  }
-
-  #dogbutton:hover{
-    box-shadow: 5px 5px 15px rgb(19, 1, 19);
-    border-radius: 10px;
-    border-style: solid;
-    border: 1px;
-  }
-
-  #petbutton:hover{
-    box-shadow: 5px 5px 15px rgb(19, 1, 19);
-    border-radius: 10px;
-    border-style: solid;
-    border: 1px;
-  }
-
-  .mac{
-    font-family:(--font);	
-    font-size: 35px;
-    color: (--dark-color);  
-  }  
-#desc-1, #desc-2, #desc-3, #desc-4, #desc-5, #desc-6{
-  word-wrap: break-word;
-}
-
-  
+ 
   /* mobile phones */
   @media (max-width:480px){
     #mobile {
@@ -314,9 +283,6 @@
   align-items: center;
   padding:1% 8%;
   height: 90px;} 
-
-
-
 
   @media screen and (max-width: 1050px){
   .main-header{
@@ -360,3 +326,4 @@
   font-size: 25px;
   }
   }
+
