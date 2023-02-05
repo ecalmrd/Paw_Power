@@ -8,6 +8,7 @@ var googlemapsURL = "https://www.google.com/maps/embed/v1/place?key=" + googlema
 var petfinderAnimalsAPI = "https://api.petfinder.com/v2/animals";
 var petfinderBreedsAPI = "https://api.petfinder.com/v2/types/{type}/breeds"
 var petfinderOrgAPI = "https://api.petfinder.com/v2/organizations";
+var petIDAPI = "https://api.petfinder.com/v2/animals/{id}";
 
 var ID = 'EmpbeFp7f6MKXl7XkxoSG64fRk4kLmwsy3mkt1KGUpsZunCWBp'
 var secret = 'fb4tKOw40Veks4aKEFdaZ5yQPl5SgwfxzsFDemc2'
@@ -40,6 +41,7 @@ fetch('https://api.petfinder.com/v2/oauth2/token', {
     token = response.access_token
     // console.log(token)
     //change query parameters here
+
     fetch('https://api.petfinder.com/v2/animals?type=', {
         method: 'GET',
         headers: {
@@ -58,6 +60,8 @@ fetch('https://api.petfinder.com/v2/oauth2/token', {
         petNameEl.text(data.animals[0].name)
         story.text(data.animals[0].description)
         replacePlaceholder(data)
+        colorGender(data)
+        
     })
 });
 
@@ -68,13 +72,23 @@ function replacePlaceholder(data) {
     }};
 
 
+function colorGender(data) {
+var profileContainer = $('#profileContainer');
+if (data.animals[0].gender === "Male") {
+    console.log(data.animals[0].gender)
+    profileContainer.addClass('has-background-info-light')
+} else { 
+    profileContainer.addClass('has-background-danger-light') 
+}};
+
+var nextButton= $('#nextBtn'); //check notes in UCSD2 - Web API - 18- event bubbling
+var prevButton= $('#prevBtn');
 
 
-
-
-
-
-
+// nextButton.on('click', function(data) {
+//         data.preventDefault();
+//     for (var i=0; data.animals[0].photos.length; i++) {    
+// }})
 
 
 
