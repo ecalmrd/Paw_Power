@@ -5,9 +5,8 @@ var googlemapsAddress
 var googlemapsURL = "https://www.google.com/maps/embed/v1/place?key=" + googlemapsAPI + "&q=" + googlemapsAddress;
 
 //petfinder API variables
-var petfinderAnimalsAPI = "https://api.petfinder.com/v2/animals";
-var petfinderBreedsAPI = "https://api.petfinder.com/v2/types/{type}/breeds"
-var petfinderOrgAPI = "https://api.petfinder.com/v2/organizations";
+var animalAPI = "https://api.petfinder.com/v2/animals?type=";
+var organizationAPI = "https://api.petfinder.com/v2/organizations?name=";
 var petIDAPI = "https://api.petfinder.com/v2/animals/{id}";
 
 var ID = 'EmpbeFp7f6MKXl7XkxoSG64fRk4kLmwsy3mkt1KGUpsZunCWBp'
@@ -28,42 +27,70 @@ var locationEl= $('#location');
 
 // for query parameter later "&age=" age + "&gender=" + gender + "&color=" + color + "&location=" + location
 
+
+var fetchData = () => {
 fetch('https://api.petfinder.com/v2/oauth2/token', {
     method: 'POST',
     headers: {
         'Content-Type': 'application/x-www-form-urlencoded'
     },
     body: `grant_type=client_credentials&client_id=${ID}&client_secret=${secret}`
-}).then((response) => {
+})
+    .then((response) => {
     return response.json()
-}).then((response) => {
+})
+    .then((response) => {
     // console.log(response)
     token = response.access_token
     // console.log(token)
     //change query parameters here
 
-    fetch('https://api.petfinder.com/v2/animals?type=', {
-        method: 'GET',
-        headers: {
-            'Authorization': `Bearer ${token}`
-        }
-    }).then((response) => {
-        return response.json()
-    }).then((data) => {
+
+fetch('https://api.petfinder.com/v2/animals?type=', {
+    method: 'GET',
+    headers: {
+        'Authorization': `Bearer ${token}`
+    }
+})
+    .then((response) => {
+    return response.json()
+})
+    .then((data) => {
         console.log(data.animals)
-        typeEl.text(data.animals[0].species)
-        breedEl.text(data.animals[0].breeds.primary)
-        ageEl.text(data.animals[0].age)
-        genderEl.text(data.animals[0].gender)
-        colorEl.text(data.animals[0].colors.primary)
-        locationEl.text(data.animals[0].distance)
-        petNameEl.text(data.animals[0].name)
-        story.text(data.animals[0].description)
-        replacePlaceholder(data)
-        colorGender(data)
-        
-    })
-});
+            typeEl.text(data.animals[0].species)
+            breedEl.text(data.animals[0].breeds.primary)
+            ageEl.text(data.animals[0].age)
+            genderEl.text(data.animals[0].gender)
+            colorEl.text(data.animals[0].colors.primary)
+            locationEl.text(data.animals[0].distance)
+            petNameEl.text(data.animals[0].name)
+            story.text(data.animals[0].description)
+
+            replacePlaceholder(data)
+            colorGender(data)
+        });
+
+fetch('https://api.petfinder.com/v2/organizations', {
+    method: 'GET',
+    headers: {
+      'Authorization': `Bearer ${token}`
+    }
+})
+    .then((response) => {
+        return response.json()
+})
+    .then((data) => {
+        console.log(data.organizations)
+    });       
+   
+}); 
+};
+
+fetchData();
+
+
+
+
 
 function replacePlaceholder(data) {
     if (data.animals[0].photos[0].full) {
@@ -81,16 +108,37 @@ if (data.animals[0].gender === "Male") {
     profileContainer.addClass('has-background-danger-light') 
 }};
 
-var nextButton= $('#nextBtn'); //check notes in UCSD2 - Web API - 18- event bubbling
+
+
+// OBTAIN HELP
+var nextButton= $('#nextBtn'); 
 var prevButton= $('#prevBtn');
+var currentImage;
+var images = []; 
 
+function pictureNavigate (data) {
+    if (!data.animals[0].photos || data.animals[0].photos.length === 0) {
+        return;
+    }
+    currentImage = data.animals[0].photos[0].full;
+    for (var i = 0; i < data.animals[0].photos.length; i++) {
+    images.push(data.animals[0].photos[i])     
+}
+    currentImage = images[0];
+    petPics.attr('src', currentImage);
+};
 
-// nextButton.on('click', function(data) {
-//         data.preventDefault();
-//     for (var i=0; data.animals[0].photos.length; i++) {    
-// }})
+//pictureNavigate button event listeners
+nextButton.click(function() {
+    pictureNavigate(1);
+    petPics.attr('src', currentImage);
+    console.log(nextButton)
+});
 
-
+prevButton.click(function() {
+    pictureNavigate(-1);
+    petPics.attr('src', currentImage);
+});
 
 
 
@@ -152,8 +200,3 @@ var prevButton= $('#prevBtn');
 // window.initMap = initMap;
 
 //end of current location code
-
-
-
-//Pet Profile Page variables
-
