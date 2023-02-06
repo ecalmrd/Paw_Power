@@ -68,3 +68,14 @@
     font-size: 20px;
     font-weight: normal;
 }
+
+.orgcontactList {
+    list-style-type: none;  
+    font-size: 15px; 
+    text-align: center; 
+}
+
+#orgContact {
+    text-align: center; 
+    margin-left: 0px;
+}

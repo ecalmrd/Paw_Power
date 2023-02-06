@@ -13,8 +13,7 @@ var ID = 'EmpbeFp7f6MKXl7XkxoSG64fRk4kLmwsy3mkt1KGUpsZunCWBp'
 var secret = 'fb4tKOw40Veks4aKEFdaZ5yQPl5SgwfxzsFDemc2'
 var token;
 
-//pet details for queryparameters
-// type is referring to if dog or cat
+// variables to DOM maniplate and add pet details to HTML
 var story= $('#story'); 
 var petPics= $('#petPics');
 var petNameEl= $('#petname');
@@ -25,10 +24,16 @@ var genderEl= $('#gender');
 var colorEl= $('#color');
 var locationEl= $('#location');
 
+//organization's contact information variables
+var orgnameEl = $('#orgName');
+var orgphoneNumberEl = $('#phoneNumber');
+var orgemailEl = $('#email');
+var orgaddressEl = $('#address');
+
+
 // for query parameter later "&age=" age + "&gender=" + gender + "&color=" + color + "&location=" + location
-
-
-var fetchData = () => {
+//function to fetch animal and organization information 
+fetchData = () => {
 fetch('https://api.petfinder.com/v2/oauth2/token', {
     method: 'POST',
     headers: {
@@ -57,17 +62,18 @@ fetch('https://api.petfinder.com/v2/animals?type=', {
 })
     .then((data) => {
         console.log(data.animals)
-            typeEl.text(data.animals[0].species)
-            breedEl.text(data.animals[0].breeds.primary)
-            ageEl.text(data.animals[0].age)
-            genderEl.text(data.animals[0].gender)
-            colorEl.text(data.animals[0].colors.primary)
-            locationEl.text(data.animals[0].distance)
-            petNameEl.text(data.animals[0].name)
-            story.text(data.animals[0].description)
 
-            replacePlaceholder(data)
-            colorGender(data)
+        typeEl.text(data.animals[0].species)
+        breedEl.text(data.animals[0].breeds.primary)
+        ageEl.text(data.animals[0].age)
+        genderEl.text(data.animals[0].gender)
+        colorEl.text(data.animals[0].colors.primary)
+        locationEl.text(data.animals[0].distance)
+        petNameEl.text(data.animals[0].name)
+        story.text(data.animals[0].description)
+
+        replacePlaceholder(data)
+        colorGender(data)
         });
 
 fetch('https://api.petfinder.com/v2/organizations', {
@@ -81,24 +87,27 @@ fetch('https://api.petfinder.com/v2/organizations', {
 })
     .then((data) => {
         console.log(data.organizations)
+
+        orgnameEl.text(data.organizations[0].name)
+        orgphoneNumberEl.text(data.organizations[0].phone)
+        orgemailEl.text(data.organizations[0].email)
+        orgaddressEl.html(`<a href="${data.organizations[0].url}" target="_blank"> ${data.organizations[0].url} </a>`);
     });       
    
 }); 
 };
-
+// end of fetch function
 fetchData();
 
 
-
-
-
+//function to replace image place holder to pet's profile image
 function replacePlaceholder(data) {
     if (data.animals[0].photos[0].full) {
         petPics.attr('src', data.animals[0].photos[0].full);
         console.log(data.animals[0].photos[0].full)
     }};
 
-
+//function to add color to profile based on pet's gender
 function colorGender(data) {
 var profileContainer = $('#profileContainer');
 if (data.animals[0].gender === "Male") {
@@ -109,12 +118,12 @@ if (data.animals[0].gender === "Male") {
 }};
 
 
-
-// OBTAIN HELP
+// Function to navigate additional pet's images
+// OBTAIN HELP :[
 var nextButton= $('#nextBtn'); 
 var prevButton= $('#prevBtn');
 var currentImage;
-var images = []; 
+var images = [] 
 
 function pictureNavigate (data) {
     if (!data.animals[0].photos || data.animals[0].photos.length === 0) {
