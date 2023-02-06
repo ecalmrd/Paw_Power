@@ -1,5 +1,3 @@
-
-//END OF TOKEN CODE
 //START FOR THE IMAGE CAROUSEL CODE
 let slideIndex = 1;
 showSlides(slideIndex);
