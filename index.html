@@ -27,7 +27,7 @@
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
     <header class="main-header">
-        <img class="logo" src="images/paw.png" alt="home">
+        <!-- <img class="logo" src="images/paw.png" alt="home"> -->
         <nav>
             <ul>
                 <li><a href="dog.html" class="hover-underline-animation">Dog care</a></li>
@@ -114,7 +114,7 @@
         <div id="location" class="columns">
             <div class="columns"></div>
             <div class="columns">
-                <div class="column">So we're searching for <span id="type">pet</span>s!</div>
+                <div class="column">So we're searching for <span id="type"></span>s!</div>
             </div>
             <div class="columns">
                 <div class="column">Where should we start looking?</div>
@@ -136,15 +136,15 @@
         <div id="modal-js-example" class="modal">
             <div class="modal-background"></div>
 
-            <div class="modal-content">
-                <div id="boop" class="box">
+            <div id = "boop" class="modal-content">
+                <div id ="boop-bg" class="box">
                     <div class="columns"></div>
                     <div class="column">
                         <p>
                             <label for="pin">Location:</label>
-                            <input type="text" id="coordinates" placeholder="Enter a location." name="place">
+                            <input type="text" id="location" placeholder="Enter a location." name="place">
                             <label for="range">Range:</label>
-                            <select name="distance" id="miles">
+                            <select name="Range" id="distance">
                                 <option value="10">10 miles</option>
                                 <option value="25">25 miles</option>
                                 <option value="50">50 miles</option>
@@ -159,6 +159,22 @@
                         <div class="column"></div>
                         <div class="column is-one-fifth"><button id="search" class="button is-primary">Search</button></div>
                         <div class="column"></div>
+                    </div>
+                </div>
+            </div>
+            <div id ="loading" class="modal-content">
+                <div id="loading-bg" class="box">
+                    <div class="columns"></div>
+                    <div class="column">
+                        <!-- loading bar here -->
+                        <p>
+                            <progress id = "waitroom" class="progress is-link" value="0" max="100">0%</progress>
+                        </p>
+                    </div>
+                    <div class="column"></div>
+
+                    <div class="column"></div>
+                    <div class="columns">   
                     </div>
                 </div>
             </div>
@@ -221,6 +237,7 @@
     <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script src="./js/script.js"></script>    
     <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTQVOisLUpvEpoW30CiZlKlPdNMUiX8J4&libraries=places"></script>
     <script>
         bulmaCarousel.attach('#slider', {
             slidesToScroll: 1,
@@ -229,6 +246,7 @@
             autoplay: true,
         });
     </script>
+    
 </body>
 
 </html>

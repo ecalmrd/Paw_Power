@@ -39,7 +39,7 @@
     background-color: (--primary-color);
 }
 
-#boop {
+#boop-bg {
     background-image: url("/imgs/boop.jpeg");
     /* photo cred: Lum3n */
     background-position: bottom;
@@ -48,6 +48,24 @@
     height: 40vh;
     overflow-y: hidden;
 }
+
+#loading-bg {
+    background-image: url("/imgs/boop.jpeg");
+    /* photo cred: Lum3n */
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 40vh;
+    overflow-y: hidden;
+}
+
+.progress{    
+    height: 30px;
+}
+
+
+
+
 
 
 @media screen and (max-width: 770px) {

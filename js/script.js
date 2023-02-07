@@ -2,8 +2,36 @@
 
 
 document.getElementById("location").style.display = 'none'
+document.getElementById("loading-bg").style.display = 'none'
+
+//Carousel Code
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("item-slide");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+
 
 var animal;
+var type;
 
 
 // Choosing a cat
@@ -11,16 +39,17 @@ $('#catbutton').on("click", function (e) {
   document.getElementById("location").style.display = 'block';
   animal = 'cat';
   document.getElementById("type").innerHTML = animal  
-  console.log('I choose ' + animal)  
-  chooseCat();
+  localStorage.clear('preference')
+  localStorage.setItem('preference', animal )
 });
 
 // Choosing a dog
 $('#dogbutton').on("click", function (e) { 
   document.getElementById("location").style.display = 'block';
   animal = 'dog';
-  document.getElementById("type").innerHTML = animal
-  console.log('I choose ' + animal)  
+  document.getElementById("type").innerHTML = animal 
+  localStorage.clear('preference')
+  localStorage.setItem('preference', animal )
 });
 
 // Choosing a pet
@@ -28,7 +57,8 @@ $('#petbutton').on("click", function (e) {
   document.getElementById("location").style.display = 'block';
   document.getElementById("type").innerHTML = animal
   animal = 'pet';
-  console.log('Surprise me! ' + animal)
+  localStorage.clear('preference')
+  localStorage.setItem('preference', animal ) 
 });
 
 
@@ -37,7 +67,8 @@ var ID = 'EmpbeFp7f6MKXl7XkxoSG64fRk4kLmwsy3mkt1KGUpsZunCWBp'
 var secret = 'fb4tKOw40Veks4aKEFdaZ5yQPl5SgwfxzsFDemc2'
 var token;
 
-function chooseCat() {
+
+function choosePet() {
   fetch('https://api.petfinder.com/v2/oauth2/token', {
       method: 'POST',
       headers: {
@@ -50,7 +81,7 @@ function chooseCat() {
       console.log(response)
       token = response.access_token
       //change query parameters here
-      fetch('https://api.petfinder.com/v2/animals?type=cat&page=4', {
+      fetch(`https://api.petfinder.com/v2/animals?`, {
           method: 'GET',
           headers: {
               'Authorization': `Bearer ${token}`
@@ -64,11 +95,6 @@ function chooseCat() {
       })
   })
 }
-
-
-
-
-
 
 //modal code
 
@@ -119,46 +145,61 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 //location search
-$('#search').on("click", function (e) {
-  let location = document.getElementById("coordinates").value;
-  let range = document.getElementById("miles").value;    
+
+  $('#search').on("click", function (e) {
+  let destination = document.getElementById("location").value;
+  let range = document.getElementById("distance").value;        
+  localStorage.clear('preference')
+  localStorage.setItem('preference', animal )
+  document.getElementById("type").value = animal
   scooby();
+  document.getElementById("boop-bg").style.display = 'none'
+  document.getElementById("loading-bg").style.display = 'block'
+  fillProgress();
+ 
   
 })
 
 //scooby snack
 function scooby(){
-let $items = $('#type, #coordinates, #miles')
+let $items = $('#type, #location, #distance')
 var obj = {}
 $items.each(function() {
   obj[this.id] = $(this).val()
 })
-
+localStorage.setItem('find',JSON.stringify(obj))
 console.log (JSON.stringify(obj, null, ' '))
 }
+ 
+ var progressArr = [1, 2, 3, 4, 5, 10, 15, 30, 60, 90, 100]; 
+  function fillProgress() {
+  
+   progressArr.forEach(function(num, index) {
+  
+     setTimeout(function() {
+  
+       $('#waitroom').val(num);
+       if ($('#waitroom').val()==100)
+       {
+        window.location.replace("https://www.google.com");
+      }
+  
+     }, 250 * index);    
+     
+   });
+
+ }
+  
+
+  
+  
+ 
+  
+ 
 
 
-var slideIndex = 1;
-showSlides(slideIndex);
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
 
-//Carousel Code
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("item-slide");
-  var captionText = document.getElementById("caption");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-}
+//end 
 
