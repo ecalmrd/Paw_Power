@@ -138,7 +138,7 @@ function replacePlaceholder(data) {
     }};
 
     function scooby(){
-      let $items = $('#type, #coordinates, #miles')
+      let $items = $('#type, #location, #distance')
       var obj = {}
       $items.each(function() {
         obj[this.id] = $(this).val()
@@ -146,3 +146,4 @@ function replacePlaceholder(data) {
       localStorage.setItem('find',JSON.stringify(obj))
       console.log (JSON.stringify(obj, null, ' '))
       }
+      

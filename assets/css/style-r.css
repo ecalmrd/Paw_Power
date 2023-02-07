@@ -237,8 +237,7 @@ img {vertical-align: middle;}
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 #small-box {
-  margin: 5vw;
-  padding: 1vw;
+  flex-shrink: 1;
     border-radius: 25px;
   background: #E6DBac; /*this is a placeholder color currently its an ugly yellow for testing purposes*/
   text-align: center;
