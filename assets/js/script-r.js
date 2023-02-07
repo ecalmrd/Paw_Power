@@ -11,7 +11,6 @@ function currentSlide(n) {
   showSlides(slideIndex = n);
 }
 
-
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlides");
@@ -138,7 +137,12 @@ function replacePlaceholder(data) {
         console.log(data.animals[0].photos[0].full)
     }};
 
-
-
-
-console.log (fetch="")
+    function scooby(){
+      let $items = $('#type, #coordinates, #miles')
+      var obj = {}
+      $items.each(function() {
+        obj[this.id] = $(this).val()
+      })
+      localStorage.setItem('find',JSON.stringify(obj))
+      console.log (JSON.stringify(obj, null, ' '))
+      }
