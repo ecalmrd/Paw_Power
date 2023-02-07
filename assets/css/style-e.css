@@ -6,18 +6,20 @@
     width: 50%;
 }
 
+.imgCSS {
+    border-radius: 25px;
+    background-position: left top;
+    background-repeat: repeat;
+    height: 800px;
+    width: 100%;
+}
+
 .petname {
     display:block;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     width: 50%;  
-}
-
-.imgCSS {
-    border-radius: 25px;
-    background-position: left top;
-    background-repeat: repeat;
 }
 
 .imgBtn {
