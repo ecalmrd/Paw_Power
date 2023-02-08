@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="./css/location.css" />
+    <link rel="stylesheet" href="./assets/css/location.css" />
     
 
 </head>
@@ -27,10 +27,10 @@
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
     <header class="main-header">
-        <!-- <img class="logo" src="images/paw.png" alt="home"> -->
+        <img id="paw" class="logo" src="./assets/imgs/paw.jpg" alt="home">
         <nav>
             <ul>
-                <li><a href="dog.html" class="hover-underline-animation">Dog care</a></li>
+                <li id="API-call"><a href="#" class="hover-underline-animation">Dog care</a></li>
                 <li><a href="cat.html" class="hover-underline-animation"> Cat care</a></li>
                 <li><a href="contact.html" class="hover-underline-animation">Contact</a></li>
                 <li><a href="likes.html" class="hover-underline-animation">💟 </a></li>
@@ -62,44 +62,44 @@
         <div id="buttons" class="columns">
             <div class="column"></div>
 
-            <div id="catbutton" class="column is-one-quarter">
+            <div id="catbutton" class="column is-one-fifth">
                 <div id = "innercat" class="box ">
                     <div class="columns is-block ">
                         <div class="column">                            
                             <figure id="cat" class="image is-128x128 has-image-centered">
-                                <a href="#"><img src="/imgs/cat.jpeg"></a>                                
+                                <a href="#"><img src="./assets/imgs/cat.jpeg"></a>                                
                             </figure>
                         </div>
                         <div class="column">
-                            <h1 class="has-text-centered mac">Cats</h1>
+                            <h2 class="has-text-centered mac">Cats</h2>
                         </div>
                     </div>
                 </div>
             </div>
-            <div id="dogbutton" class="column is-one-quarter">
+            <div id="dogbutton" class="column is-one-fifth">
                 <div id = "innerdog" class="box">
                     <div class="columns is-block">
                         <div class="column">
                             <figure id="dog" class="image is-128x128 has-image-centered">                                
-                                <a href="#"><img src="/imgs/dog.jpg"></a>                               
+                                <a href="#"><img src="./assets/imgs/dog.jpg"></a>                               
                             </figure>
                         </div>
                         <div class="column">
-                            <h1 class="has-text-centered mac">Dogs</h1>
+                            <h2 class="has-text-centered mac">Dogs</h2>
                         </div>
                     </div>
                 </div>
             </div>
-            <div id="petbutton" class="column is-one-quarter">
+            <div id="petbutton" class="column is-one-fifth">
                 <div id = "innerpet" class="box">
                     <div class="columns is-block">
                         <div class="column">
                             <figure id="pets" class="image is-128x128 has-image-centered">
-                                <a href="#"><img src="/imgs/pet.jpg"></a>
+                                <a href="#"><img src="./assets/imgs/pet.jpg"></a>
                             </figure>
                         </div>
                         <div class="column has-text-centered">
-                            <h1 class="has-text-centered mac">Pets</h1>
+                            <h2 class="has-text-centered mac">Pets</h2>
                         </div>
                     </div>
                 </div>
@@ -192,7 +192,7 @@
         <div id="slider">
             <div class="card">
                 <div class="card-image">
-                    <figure class="image is-16by9 is-covered">
+                    <figure id class="image is-16by9 is-covered">
                         <img src="https://source.unsplash.com/random/1200x500" alt="" />
                     </figure>
                 </div>
@@ -235,9 +235,9 @@
         </div>
     </section>
     <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
-    <script src="./js/script.js"></script>    
+    <script src="./assets/js/sincScript.js"></script>    
     <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTQVOisLUpvEpoW30CiZlKlPdNMUiX8J4&libraries=places"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTQVOisLUpvEpoW30CiZlKlPdNMUiX8J4&libraries=places&callback=initMap"></script>
     <script>
         bulmaCarousel.attach('#slider', {
             slidesToScroll: 1,

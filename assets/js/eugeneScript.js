@@ -106,7 +106,10 @@ fetchData();
 
 //function to replace image place holder to pet's profile image
 function replacePlaceholder(data) {
-    if (data.animals[0].photos[0].full) {
+    if (data.animals[0].photos[0].length === null || data.animals[0].photos[0].length === 0){
+        petPics.attr('src', "../imgs/placeholderimg.jpg")
+    }
+    else if (data.animals[0].photos[0].full) {
         petPics.attr('src', data.animals[0].photos[0].full);
         console.log(data.animals[0].photos[0].full)
     }
