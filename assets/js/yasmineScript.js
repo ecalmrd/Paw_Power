@@ -120,20 +120,3 @@ var fetchData = () => {
   fetchData();
 
 
-//code for adding profiles to image slide
-
-
-var sliderProfileEl1= $('#sliderprofile1');
-var sliderProfileEl2= $('#sliderprofile2');;
-var sliderProfileEl3= $('#sliderprofile3');
-
-
-function profileSliders(data) {
-for (var i=0; i < data.animals[2];i++) {
-sliderProfileEl1.attr('src', data.animals[i=0].photos[0].small);
-sliderProfileEl2.attr('src', data.animals[i=1].photos[0].small);
-sliderProfileEl3.attr('src', data.animals[i=2].photos[0].small);
-console.log(data.animals[0].photos[0].small)
-
-}
-};
