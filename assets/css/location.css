@@ -40,7 +40,7 @@
 }
 
 #boop-bg {
-    background-image: url("../assets/imgs/boop.jpeg");
+    background-image: url("../imgs/boop.jpeg");
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
@@ -49,7 +49,7 @@
 }
 
 #loading-bg {
-    background-image: url("../assets/imgs/boop.jpeg");
+    background-image: url("../imgs/boop.jpeg");
     /* photo cred: Lum3n */
     background-position: bottom;
     background-repeat: no-repeat;
@@ -61,11 +61,6 @@
 .progress{    
     height: 30px;
 }
-
-
-
-
-
 
 @media screen and (max-width: 770px) {
 
