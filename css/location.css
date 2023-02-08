@@ -40,7 +40,7 @@
 }
 
 #boop-bg {
-    background-image: url("/imgs/boop.jpeg");
+    background-image: url("./imgs/boop.jpeg");
     /* photo cred: Lum3n */
     background-position: bottom;
     background-repeat: no-repeat;
@@ -50,7 +50,7 @@
 }
 
 #loading-bg {
-    background-image: url("/imgs/boop.jpeg");
+    background-image: url("./imgs/boop.jpeg");
     /* photo cred: Lum3n */
     background-position: bottom;
     background-repeat: no-repeat;
