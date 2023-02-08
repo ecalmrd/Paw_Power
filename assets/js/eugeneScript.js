@@ -8,8 +8,8 @@ var googlemapsURL = "https://www.google.com/maps/embed/v1/place?key=" + googlema
 var animalAPI = "https://api.petfinder.com/v2/animals?type=";
 var organizationAPI = "https://api.petfinder.com/v2/organizations?name=";
 var petIDAPI = "https://api.petfinder.com/v2/animals/{id}";
-var ID = 'EmpbeFp7f6MKXl7XkxoSG64fRk4kLmwsy3mkt1KGUpsZunCWBp'
-var secret = 'fb4tKOw40Veks4aKEFdaZ5yQPl5SgwfxzsFDemc2'
+var ID ='ZIryHn5E8xyhG6vho1rYGCV4W2tB55s4FihvxbhGmXGvSDer4N'
+var secret ='ZEKvuaftgTQ2Niug84aBdxp97YzvpjaUnmOAXTm0copy'
 var token;
 
 // variables to DOM maniplate and add pet details to HTML
@@ -54,7 +54,7 @@ fetchData = () => {
                 method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${token}`
-                }
+                }      
             })
                 .then((response) => {
                     return response.json()
