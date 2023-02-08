@@ -47,7 +47,6 @@
 
 #boop-bg {
     background-image: url("../imgs/boop.jpeg");
-    /* photo cred: Lum3n */
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
@@ -68,11 +67,6 @@
 .progress{    
     height: 30px;
 }
-
-
-
-
-
 
 @media screen and (max-width: 770px) {
 

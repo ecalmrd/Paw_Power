@@ -8,8 +8,8 @@ var googlemapsURL = "https://www.google.com/maps/embed/v1/place?key=" + googlema
 var animalAPI = "https://api.petfinder.com/v2/animals?type=";
 var organizationAPI = "https://api.petfinder.com/v2/organizations?name=";
 var petIDAPI = "https://api.petfinder.com/v2/animals/{id}";
-var ID = 'EmpbeFp7f6MKXl7XkxoSG64fRk4kLmwsy3mkt1KGUpsZunCWBp'
-var secret = 'fb4tKOw40Veks4aKEFdaZ5yQPl5SgwfxzsFDemc2'
+var ID ='ZIryHn5E8xyhG6vho1rYGCV4W2tB55s4FihvxbhGmXGvSDer4N'
+var secret ='ZEKvuaftgTQ2Niug84aBdxp97YzvpjaUnmOAXTm0'
 var token;
 
 // variables to DOM maniplate and add pet details to HTML
@@ -54,7 +54,7 @@ fetchData = () => {
                 method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${token}`
-                }
+                }      
             })
                 .then((response) => {
                     return response.json()
@@ -163,9 +163,7 @@ prevButton.click(function (event) {
 });
 
 
-
-     
-
+  
 // //code to show current location https://developers.google.com/maps/documentation/javascript/geolocation#maps_map_geolocation-javascript
 // let map, infoWindow;
 // function initMap() {
@@ -219,3 +217,19 @@ prevButton.click(function (event) {
 // window.initMap = initMap;
 
 // // end of current location code
+
+
+// //code for adding profiles to image slide
+// var sliderProfileEl1= $('#sliderprofile1');
+// var sliderProfileEl2= $('#sliderprofile2');;
+// var sliderProfileEl3= $('#sliderprofile3');
+
+// function profileSliders(data) {
+// for (var i=0; i < data.animals[2];i++) {
+// sliderProfileEl1.attr('src', data.animals[i=0].photos[0].small);
+// sliderProfileEl2.attr('src', data.animals[i=1].photos[0].small);
+// sliderProfileEl3.attr('src', data.animals[i=2].photos[0].small);
+// console.log(data.animals[0].photos[0].small)
+
+// }
+// };

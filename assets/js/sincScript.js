@@ -4,6 +4,32 @@
 document.getElementById("location").style.display = 'none'
 document.getElementById("loading-bg").style.display = 'none'
 
+//Carousel Code
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("item-slide");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+
+
 var animal;
 var type;
 
@@ -78,11 +104,43 @@ $('#petbutton').on("click", function (e) {
   document.getElementById("type").innerHTML = animal
   animal = 'pet';
   localStorage.clear('preference')
-  localStorage.setItem('preference', animal)
+  localStorage.setItem('preference', animal ) 
 });
 
 
+// PetFinder Api
+var ID = 'EmpbeFp7f6MKXl7XkxoSG64fRk4kLmwsy3mkt1KGUpsZunCWBp'
+var secret = 'fb4tKOw40Veks4aKEFdaZ5yQPl5SgwfxzsFDemc2'
+var token;
 
+
+function choosePet() {
+  fetch('https://api.petfinder.com/v2/oauth2/token', {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      body: `grant_type=client_credentials&client_id=${ID}&client_secret=${secret}`
+  }).then((response) => {
+      return response.json()
+  }).then((response) => {
+      console.log(response)
+      token = response.access_token
+      //change query parameters here
+      fetch(`https://api.petfinder.com/v2/animals?`, {
+          method: 'GET',
+          headers: {
+              'Authorization': `Bearer ${token}`
+          }
+      }).then((response) => {
+          return response.json()
+      }).then((response) => {
+          console.log(response.animals);
+          console.log(response.animals[0].name);
+
+      })
+  })
+}
 
 //modal code
 
@@ -134,15 +192,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //location search
 
-$('#search').on("click", function (e) {
+  $('#search').on("click", function (e) {
   let destination = document.getElementById("location").value;
-  // if (destination == null || destination ==''){
-  //   alert("Please enter a city.")
-  //   return false;
-  // }  
-  let range = document.getElementById("distance").value;
+  let range = document.getElementById("distance").value;        
   localStorage.clear('preference')
-  localStorage.setItem('preference', animal)
+  localStorage.setItem('preference', animal )
   document.getElementById("type").value = animal
   scooby();
   document.getElementById("boop-bg").style.display = 'none'
