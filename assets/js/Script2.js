@@ -208,12 +208,40 @@ fetchData();
 
 //function to replace image place holder to pet's profile image
 function replacePlaceholder(data) {
-    if (data.animals[0].photos[0].full) {
+    if (data.animals[0].photos.length > 0) {
         petPics.attr('src', data.animals[0].photos[0].full);
         console.log(data.animals[0].photos[0].full)
     }
-    if (data.animals[1].photos[0].full) {
+    if (data.animals[1].photos.length > 0) {
         petPics1.attr('src', data.animals[1].photos[0].full);
+        console.log(data.animals[0].photos[0].full)
+    }
+    if (data.animals[2].photos.length > 0) {
+        petPics2.attr('src', data.animals[2].photos[0].full);
+        console.log(data.animals[0].photos[0].full)
+    }
+    if (data.animals[3].photos.length > 0) {
+        petPics3.attr('src', data.animals[3].photos[0].full);
+        console.log(data.animals[0].photos[0].full)
+    }
+    if (data.animals[4].photos.length > 0) {
+        petPics4.attr('src', data.animals[4].photos[0].full);
+        console.log(data.animals[0].photos[0].full)
+    }
+    if (data.animals[5].photos.length > 0) {
+        petPics5.attr('src', data.animals[5].photos[0].full);
+        console.log(data.animals[0].photos[0].full)
+    }
+    if (data.animals[6].photos.length > 0) {
+        petPics6.attr('src', data.animals[6].photos[0].full);
+        console.log(data.animals[0].photos[0].full)
+    }
+    if (data.animals[7].photos.length > 0) {
+        petPics7.attr('src', data.animals[7].photos[0].full);
+        console.log(data.animals[0].photos[0].full)
+    }
+    if (data.animals[8].photos.length > 0) {
+        petPics8.attr('src', data.animals[8].photos[0].full);
         console.log(data.animals[0].photos[0].full)
     }
 }
