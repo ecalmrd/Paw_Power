@@ -9,7 +9,7 @@ var animalAPI = "https://api.petfinder.com/v2/animals?type=";
 var organizationAPI = "https://api.petfinder.com/v2/organizations?name=";
 var petIDAPI = "https://api.petfinder.com/v2/animals/{id}";
 var ID ='ZIryHn5E8xyhG6vho1rYGCV4W2tB55s4FihvxbhGmXGvSDer4N'
-var secret ='ZEKvuaftgTQ2Niug84aBdxp97YzvpjaUnmOAXTm0copy'
+var secret ='ZEKvuaftgTQ2Niug84aBdxp97YzvpjaUnmOAXTm0'
 var token;
 
 // variables to DOM maniplate and add pet details to HTML
@@ -160,8 +160,7 @@ prevButton.click(function (event) {
 });
 
 
-
-    
+  
 // //code to show current location https://developers.google.com/maps/documentation/javascript/geolocation#maps_map_geolocation-javascript
 // let map, infoWindow;
 // function initMap() {
@@ -218,12 +217,9 @@ prevButton.click(function (event) {
 
 
 // //code for adding profiles to image slide
-
-
 // var sliderProfileEl1= $('#sliderprofile1');
 // var sliderProfileEl2= $('#sliderprofile2');;
 // var sliderProfileEl3= $('#sliderprofile3');
-
 
 // function profileSliders(data) {
 // for (var i=0; i < data.animals[2];i++) {

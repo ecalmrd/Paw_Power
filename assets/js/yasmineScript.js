@@ -41,8 +41,8 @@ function showSlides(n) {
   });
 //end code for button//
 
-var ID = 'EmpbeFp7f6MKXl7XkxoSG64fRk4kLmwsy3mkt1KGUpsZunCWBp'
-var secret = 'fb4tKOw40Veks4aKEFdaZ5yQPl5SgwfxzsFDemc2'
+var ID = 'ZIryHn5E8xyhG6vho1rYGCV4W2tB55s4FihvxbhGmXGvSDer4N'
+var secret = 'ZEKvuaftgTQ2Niug84aBdxp97YzvpjaUnmOAXTm0'
 var token;
 
 var fetchData = () => {
@@ -74,34 +74,35 @@ var fetchData = () => {
       .then((data) => {
           console.log(data.animals)
           profileSliders(data)
+          replaceCardPlaceholder(data)
 
-          for(var i=0; i< data.animals.length;i++) {
-          var cardTemplate=`
-            <div class="card">
-            <div class="card-image">
-                <figure class="image is-16by9 is-covered">
-                <img src="${data.animals[i].photos[0].medium}" alt="Animal Image">
+        //   for(var i=0; i< data.animals.length;i++) {
+        //   var cardTemplate=`
+        //     <div class="card">
+        //     <div class="card-image">
+        //         <figure class="image is-16by9 is-covered">
+        //         <img src="${data.animals[i].photos[0].medium}" alt="Animal Image">
                 
-                </figure>
-            </div>
+        //         </figure>
+        //     </div>
            
-            <div class="card-content slider-text ">
-                <div class="is-size-5 box">
-                name: ${ data.animals[i].name }
-               description: ${ data.animals[i].description}
+        //     <div class="card-content slider-text ">
+        //         <div class="is-size-5 box">
+        //         name: ${ data.animals[i].name }
+        //        description: ${ data.animals[i].description}
 
-                    <div class="slider-buttons">
-                      <button class="button is-primary" id="next">Next</button>
-                      </div>
+        //             <div class="slider-buttons">
+        //               <button class="button is-primary" id="next">Next</button>
+        //               </div>
 
-                </div>
-            </div>
-        </div>
-            `
-            document.querySelector("#slider").innerHTML+=cardTemplate
-          }
+        //         </div>
+        //     </div>
+        // </div>
+        //     `
+        //   document.querySelector("#slider").innerHTML+=cardTemplate
+        // }
          
-          });
+        });
           fetch('https://api.petfinder.com/v2/organizations', {
             method: 'GET',
             headers: {
@@ -118,5 +119,17 @@ var fetchData = () => {
     });
 };
   fetchData();
+
+// function to replace card placeholder wit petfinder API
+var card1= $("#card1")
+var card2= $("#card2")
+
+function replaceCardPlaceholder(data) {
+  if (data.animals[0].photos[0].full) {
+      card1.attr('src', data.animals[0].photos[0].full);
+      card2.attr('src', data.animals[0].photos[0].full);
+      console.log(data.animals[0].photos[0].full)
+  }
+};
 
 
