@@ -1,15 +1,9 @@
-
-//googlemaps API variables
-var googlemapsAPI = "AIzaSyCTQVOisLUpvEpoW30CiZlKlPdNMUiX8J4";
-var googlemapsAddress
-var googlemapsURL = "https://www.google.com/maps/embed/v1/place?key=" + googlemapsAPI + "&q=" + googlemapsAddress;
-
 //petfinder API variables
 var animalAPI = "https://api.petfinder.com/v2/animals?type=";
 var organizationAPI = "https://api.petfinder.com/v2/organizations?name=";
 var petIDAPI = "https://api.petfinder.com/v2/animals/{id}";
-var ID = 'EmpbeFp7f6MKXl7XkxoSG64fRk4kLmwsy3mkt1KGUpsZunCWBp'
-var secret = 'fb4tKOw40Veks4aKEFdaZ5yQPl5SgwfxzsFDemc2'
+var ID = 'nCBkcBAElKdOOTOkSDQkboV9uAF2e1t3vxszPAsoJP0wehxCK5'
+var secret = 'v4wMb5hrxiYYsippsyz7nIL2UqmVsZfDSXpkdiX3'
 var token;
 
 // variables to DOM maniplate and add pet details to HTML
@@ -159,60 +153,3 @@ prevButton.click(function (event) {
     petPics.attr('src', currentImage);
 });
 
-
-
-     
-
-// //code to show current location https://developers.google.com/maps/documentation/javascript/geolocation#maps_map_geolocation-javascript
-// let map, infoWindow;
-// function initMap() {
-//     map = new google.maps.Map(document.getElementById("map"), {
-//         center: { lat: -34.397, lng: 150.644 },
-//         zoom: 6,
-//     });
-//     infoWindow = new google.maps.InfoWindow();
-
-//     const locationButton = document.createElement("button");
-
-//     locationButton.textContent = "Pan to Current Location";
-//     locationButton.classList.add("custom-map-control-button");
-//     map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
-//     locationButton.addEventListener("click", () => {
-//         // Try HTML5 geolocation.
-//         if (navigator.geolocation) {
-//             navigator.geolocation.getCurrentPosition(
-//                 (position) => {
-//                     const pos = {
-//                         lat: position.coords.latitude,
-//                         lng: position.coords.longitude,
-//                     };
-
-//                     infoWindow.setPosition(pos);
-//                     infoWindow.setContent("Location found.");
-//                     infoWindow.open(map);
-//                     map.setCenter(pos);
-//                 },
-//                 () => {
-//                     handleLocationError(true, infoWindow, map.getCenter());
-//                 }
-//             );
-//         } else {
-//             // Browser doesn't support Geolocation
-//             handleLocationError(false, infoWindow, map.getCenter());
-//         }
-//     });
-// }
-
-// function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-//     infoWindow.setPosition(pos);
-//     infoWindow.setContent(
-//         browserHasGeolocation
-//             ? "Error: The Geolocation service failed."
-//             : "Error: Your browser doesn't support geolocation."
-//     );
-//     infoWindow.open(map);
-// }
-
-// window.initMap = initMap;
-
-// // end of current location code
