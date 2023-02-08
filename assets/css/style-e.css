@@ -1,3 +1,8 @@
+#googleMaps {
+    width:600px;
+    height: 450px;
+}
+
 
 .profilePIC {
     display:block;
@@ -7,6 +12,7 @@
 }
 
 .imgCSS {
+    object-fit: contain;
     border-radius: 25px;
     background-position: left top;
     background-repeat: repeat;

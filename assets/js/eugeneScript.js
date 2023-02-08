@@ -8,7 +8,6 @@ var googlemapsURL = "https://www.google.com/maps/embed/v1/place?key=" + googlema
 var animalAPI = "https://api.petfinder.com/v2/animals?type=";
 var organizationAPI = "https://api.petfinder.com/v2/organizations?name=";
 var petIDAPI = "https://api.petfinder.com/v2/animals/{id}";
-
 var ID = 'EmpbeFp7f6MKXl7XkxoSG64fRk4kLmwsy3mkt1KGUpsZunCWBp'
 var secret = 'fb4tKOw40Veks4aKEFdaZ5yQPl5SgwfxzsFDemc2'
 var token;
@@ -32,7 +31,6 @@ var orgemailEl = $('#email');
 var orgaddressEl = $('#urlAddress');
 
 
-// for query parameter later "&age=" age + "&gender=" + gender + "&color=" + color + "&location=" + location
 //function to fetch oauth token, animal and organization information 
 fetchData = () => {
     // this will fetch oauth2 token
@@ -50,7 +48,6 @@ fetchData = () => {
             // console.log(response)
             token = response.access_token
             // console.log(token)
-            //change query parameters here
 
             // this will fetch animals information
             fetch('https://api.petfinder.com/v2/animals?type=', {
@@ -64,8 +61,9 @@ fetchData = () => {
                 })
                 .then((data) => {
                     console.log(data.animals)
-                    animalPhotosArray = data.animals[0].photos
+                    animalPhotosArray = data.animals[0].photos // this acquires obtains the array from photos
 
+                    //this displays the pet details on html page, replacing the placeholder text
                     typeEl.text(data.animals[0].species)
                     breedEl.text(data.animals[0].breeds.primary)
                     ageEl.text(data.animals[0].age)
@@ -75,8 +73,8 @@ fetchData = () => {
                     petNameEl.text(data.animals[0].name)
                     story.text(data.animals[0].description)
 
-                    replacePlaceholder(data)
-                    colorGender(data)
+                    replacePlaceholder(data) //function to replace image place holder to pet's profile image
+                    colorGender(data) //function to add color to profile based on pet's gender
                 });
 
             // this will fetch pet organization's information
@@ -92,6 +90,7 @@ fetchData = () => {
                 .then((data) => {
                     console.log(data.organizations)
 
+                    //displays organization contact information at bottom right column
                     orgnameEl.text(data.organizations[0].name)
                     orgphoneNumberEl.text(data.organizations[0].phone)
                     orgemailEl.text(data.organizations[0].email)
@@ -102,6 +101,7 @@ fetchData = () => {
 };
 // end of fetch function
 fetchData();
+
 
 
 //function to replace image place holder to pet's profile image
@@ -124,7 +124,6 @@ function colorGender(data) {
 };
 
 // Function to navigate additional pet's images
-// OBTAIN HELP :[
 var nextButton = $('#nextBtn');
 var prevButton = $('#prevBtn');
 var currentIndex = 0
@@ -144,15 +143,6 @@ function pictureNavigate() {
 //pictureNavigate button event listeners
 nextButton.click(function (event) {
     event.stopPropagation();
-    if (currentIndex < animalPhotosArray.length - 1) {
-        currentIndex++ 
-    }
-    pictureNavigate();
-    petPics.attr('src', currentImage);
-});
-
-prevButton.click(function (event) {
-    event.stopPropagation();
     if (currentIndex > 0) {
         currentIndex--
     }
@@ -160,11 +150,20 @@ prevButton.click(function (event) {
     petPics.attr('src', currentImage);
 });
 
+prevButton.click(function (event) {
+    event.stopPropagation();
+    if (currentIndex < animalPhotosArray.length - 1) {
+        currentIndex++ 
+    }
+    pictureNavigate();
+    petPics.attr('src', currentImage);
+});
 
 
 
-//code to show current location
-//https://developers.google.com/maps/documentation/javascript/geolocation#maps_map_geolocation-javascript
+     
+
+// //code to show current location https://developers.google.com/maps/documentation/javascript/geolocation#maps_map_geolocation-javascript
 // let map, infoWindow;
 // function initMap() {
 //     map = new google.maps.Map(document.getElementById("map"), {
@@ -216,4 +215,4 @@ prevButton.click(function (event) {
 
 // window.initMap = initMap;
 
-//end of current location code
+// // end of current location code
