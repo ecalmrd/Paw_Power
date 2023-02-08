@@ -181,7 +181,7 @@ console.log (JSON.stringify(obj, null, ' '))
        $('#waitroom').val(num);
        if ($('#waitroom').val()==100)
        {
-        window.location.replace("https://www.google.com");
+        window.location.replace("./profilePet.html");
       }
   
      }, 250 * index);    
