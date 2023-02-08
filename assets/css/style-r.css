@@ -236,29 +236,12 @@ img {vertical-align: middle;}
     background: white;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
-
-#medium-box {
-  width: 90%
-
-}
 #small-box {
+  flex-shrink: 1;
     border-radius: 25px;
   background: #E6DBac; /*this is a placeholder color currently its an ugly yellow for testing purposes*/
   text-align: center;
-  width: 30vw;
-  height: 20vw;
-  overflow: ;
 }
 
-#small-box2 {
-  flex-shrink: 1;
-    border-radius: 25px;
-  background: Red; /*this is a placeholder color currently its an ugly yellow for testing purposes*/
-  text-align: center;
-}
 
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-}
+
