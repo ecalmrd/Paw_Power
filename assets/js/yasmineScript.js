@@ -61,6 +61,7 @@ var fetchData = () => {
       token = response.access_token
       // console.log(token)
       //change query parameters here
+
   fetch('https://api.petfinder.com/v2/animals?type=', {
       method: 'GET',
       headers: {
@@ -71,10 +72,11 @@ var fetchData = () => {
       return response.json()
   })
       .then((data) => {
-
           console.log(data.animals)
+          profileSliders(data)
+
           for(var i=0; i< data.animals.length;i++) {
-            var cardTemplate=`
+          var cardTemplate=`
             <div class="card">
             <div class="card-image">
                 <figure class="image is-16by9 is-covered">
@@ -99,29 +101,39 @@ var fetchData = () => {
             document.querySelector("#slider").innerHTML+=cardTemplate
           }
          
-              // typeEl.text(data.animals[0].species)
-              // breedEl.text(data.animals[0].breeds.primary)
-              // ageEl.text(data.animals[0].age)
-              // genderEl.text(data.animals[0].gender)
-              // colorEl.text(data.animals[0].colors.primary)
-              // locationEl.text(data.animals[0].distance)
-              // petNameEl.text(data.animals[0].name)
-              // story.text(data.animals[0].description)
-              // replacePlaceholder(data)
-              // colorGender(data)
           });
-  fetch('https://api.petfinder.com/v2/organizations', {
-      method: 'GET',
-      headers: {
-        'Authorization': `Bearer ${token}`
-      }
-  })
-      .then((response) => {
-          return response.json()
-  })
-      .then((data) => {
-          console.log(data.organizations)
-      });
-  });
-  };
+          fetch('https://api.petfinder.com/v2/organizations', {
+            method: 'GET',
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        })
+            .then((response) => {
+                return response.json()
+            })
+            .then((data) => {
+                console.log(data.organizations)
+            });
+
+    });
+};
   fetchData();
+
+
+//code for adding profiles to image slide
+
+
+var sliderProfileEl1= $('#sliderprofile1');
+var sliderProfileEl2= $('#sliderprofile2');;
+var sliderProfileEl3= $('#sliderprofile3');
+
+
+function profileSliders(data) {
+for (var i=0; i < data.animals[2];i++) {
+sliderProfileEl1.attr('src', data.animals[i=0].photos[0].small);
+sliderProfileEl2.attr('src', data.animals[i=1].photos[0].small);
+sliderProfileEl3.attr('src', data.animals[i=2].photos[0].small);
+console.log(data.animals[0].photos[0].small)
+
+}
+};

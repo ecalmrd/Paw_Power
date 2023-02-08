@@ -161,8 +161,7 @@ prevButton.click(function (event) {
 
 
 
-     
-
+    
 // //code to show current location https://developers.google.com/maps/documentation/javascript/geolocation#maps_map_geolocation-javascript
 // let map, infoWindow;
 // function initMap() {
