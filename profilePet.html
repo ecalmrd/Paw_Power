@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Profile</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap" />   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"/> 
+    <link rel="stylesheet" href="./assets/css/style-e.css"/>
+</head>
+
+<body>
+<!---------------------------- Main Navigation Bar ---------------------------->
+    <header class="main-header">
+        <img class="logo" src="images/paw-print.png" alt="home">
+        <nav>        
+            <ul class="tabs is-right">
+                <li><a href="dog.html" class="hover-underline-animation">Dog care</a></li>
+                <li><a href="cat.html" class="hover-underline-animation"> Cat care</a></li>
+                <li><a href="contact.html" class="hover-underline-animation">Contact</a></li>
+                <li><a href="likes.html"class="hover-underline-animation">💟 </a></li>
+            </ul>
+        </nav>
+    </header>
+
+<!---------------------------- Main Profile Picture Section ---------------------------->
+<div class="container is-fluid is-full">  
+    <div id="profileContainer" class="content is-large has-text-centered">
+                <h2 id="petname" class="petname pt-4 mt-4 mb-4">Pet Name Here</h2>
+                <div class="profilePIC">
+                    <img id="petPics" class="imgCSS" src= "C:\users\genec\Paw_Power\assets\imgs\placeholderimg.jpg" />
+                        <div class="container imgBtnContainer">
+                        <button id="nextBtn" class="imgBtn button is-outlined is-primary is-medium is-responsive is-rounded tabs is-centered "> Previous </button>
+                        <button id="prevBtn" class="imgBtn button is-outlined is-link is-medium is-responsive is-rounded tabs is-centered"> Next  </button>
+                        </div> 
+                </div>
+
+<!-----------------------------  Pet Information ---------------------------->   
+            <div class = "container">
+                <ul class="tabs is-centered">
+                    <li id="type" >Type </li>
+                    <li id="breed"> Breed</li>
+                    <li id="age"> Age </li>
+                    <li id="gender"> Gender </li>
+                    <li id="color"> Color</li>
+                    <li id="location"> Location</li>
+            </div>
+    </div>
+</div>
+
+<!----------------------------- Sub-Navbar ---------------------------->
+<section class="section py-4"> 
+    <div class="notification is-secondary">
+        <div class="content is-medium">
+            <nav class="navbar">        
+                <ul class="tabs is-centered">
+                    <li> <a href="#About" class="hover-underline-animation">About </a> </li>
+                    <li> <a href="#Breed" class="hover-underline-animation">Breed </a>  </li>
+                    <li> <a href="#Organization" class="hover-underline-animation">Organization </a> </li>
+                    <li> <a href="#Contact" class="hover-underline-animation">Contact </a> </li>
+                </ul> 
+            </nav>
+        </div>
+    </div>
+
+<!----------------------------- Story Detail Section ---------------------------->
+    <div class="notification is-secondary" >
+        <div class="content is-medium">
+            <h2> About This Paw </h2>
+            <h3 id="story"> Story </h3>
+            </div>  
+        </div>
+    </div>
+</section>
+
+<!----------------------------- Organization ---------------------------->
+<section class="section pt-1"> 
+    <div class="notification is-secondary" >
+        <div class="content is-medium has-text-centered">
+            <h3> Organization & Contact Information </h3> <!--append google maps-->
+            <div class="columns">
+                <div id="googleMaps" class="column">
+                </div>
+                <div class="column">
+                    <h4 id="orgName"> Organization's Name </h4>
+                    <ul id ="orgContact" class=""> Contact Information  </ul>
+                        <li id="phoneNumber" class ="orgcontactList" > Phone number </li>
+                        <li id="email" class ="orgcontactList" > E-mail </li>
+                        <li id="urlAddress" class ="orgcontactList"> URL Address </li>
+                </div>
+            </div>    
+    </div>
+</section>
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="./assets/js/eugeneScript.js"></script> 
+</body>
+</html>
+
+
