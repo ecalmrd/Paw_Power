@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .card {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          max-width: 300px;
+          margin: auto;
+          text-align: center;
+          font-family: arial;
+        }
+        
+        .title {
+          color: grey;
+          font-size: 18px;
+        }
+        
+        button {
+          border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: white;
+          background-color: #000;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;
+        }
+        
+        a {
+          text-decoration: none;
+          font-size: 22px;
+          color: black;
+        }
+        
+        button:hover, a:hover {
+          opacity: 0.7;
+        }
+        </style>
+        </head>
+        <body>
+
+            
+        <div class="card">
+            <div class="profilePIC">
+            <img id="petPics" class="imgCSS" src="https://i.pinimg.com/564x/da/b7/38/dab73866272e40a81449617dc96bf58e.jpg"style="width:100%">
+        </div>
+        <h2 id="petname" class="petname pt-4 mt-4 mb-4">Pet Name Here</h2>
+          <div class = "container">
+            <ul class="tabs is-centered"> <!--append child here in JS-->
+               <li id="breed"> Breed</li>
+               <li id="age"> Age </li>
+               <li id="gender"> Gender </li>
+               <li id="location"> Location</li>
+        </div>
+          <p><button>Learn More</button></p>
+        </div>
+
+</style>
+</html>
+
+
+
+
+
+
+
+<div class="container" id="big-box">
+    <div id="big-box-title">
+        <h1 style="font-size: 40px;"><center><u>Adopt your fuzzy companion Now!!!</u></center></h1>
+    </div>
+<div id="small-box">
+ <!-- A PLACE FOR THE API TO PLUG IN THE INFORMATION-->
+    <div class="container is-fluid is-full">  
+         <div class="has-background-white content is-large has-text-centered">
+<h2 id="petname" class="petname pt-4 mt-4 mb-4">Pet Name Here</h2> <!--append pet name in JS -->
+            <div class="profilePIC">
+<img id="petPics" class="imgCSS" src="https://i.pinimg.com/564x/da/b7/38/dab73866272e40a81449617dc96bf58e.jpg">
+            </div>
+        </div>
+        <!-----------------------------  Pet Information ---------------------------->   
+        <div class = "container">
+             <ul class="tabs is-centered"> <!--append child here in JS-->
+                <li id="breed"> Breed</li>
+                <li id="age"> Age </li>
+                <li id="gender"> Gender </li>
+                <li id="location"> Location</li>
+         </div>
+    </div>
+</div>
+</div>
