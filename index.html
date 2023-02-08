@@ -16,9 +16,9 @@
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="./css/location.css" />
-    
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./assets/css/location.css" />
+
 
 </head>
 
@@ -42,13 +42,13 @@
     <!-- this is where the browsing code will be -->
     <section class="hero is-small is-link">
         <div class="hero-body">
-          <p class="title">            
-          </p>
-          <p class="subtitle">
-          </p>
+            <p class="title">
+            </p>
+            <p class="subtitle">
+            </p>
         </div>
-      </section>
-    
+    </section>
+
     <section>
         <!-- choose a pet -->
         <div class="columns is-centered">
@@ -63,11 +63,11 @@
             <div class="column"></div>
 
             <div id="catbutton" class="column is-one-quarter">
-                <div id = "innercat" class="box ">
+                <div id="innercat" class="box ">
                     <div class="columns is-block ">
-                        <div class="column">                            
+                        <div class="column">
                             <figure id="cat" class="image is-128x128 has-image-centered">
-                                <a href="#"><img src="/imgs/cat.jpeg"></a>                                
+                                <a href="#"><img src="./assets/imgs/cat.jpeg"></a>
                             </figure>
                         </div>
                         <div class="column">
@@ -77,11 +77,11 @@
                 </div>
             </div>
             <div id="dogbutton" class="column is-one-quarter">
-                <div id = "innerdog" class="box">
+                <div id="innerdog" class="box">
                     <div class="columns is-block">
                         <div class="column">
-                            <figure id="dog" class="image is-128x128 has-image-centered">                                
-                                <a href="#"><img src="/imgs/dog.jpg"></a>                               
+                            <figure id="dog" class="image is-128x128 has-image-centered">
+                                <a href="#"><img src="./assets/imgs/dog.jpg"></a>
                             </figure>
                         </div>
                         <div class="column">
@@ -91,11 +91,11 @@
                 </div>
             </div>
             <div id="petbutton" class="column is-one-quarter">
-                <div id = "innerpet" class="box">
+                <div id="innerpet" class="box">
                     <div class="columns is-block">
                         <div class="column">
                             <figure id="pets" class="image is-128x128 has-image-centered">
-                                <a href="#"><img src="/imgs/pet.jpg"></a>
+                                <a href="#"><img src="./assets/imgs/pet.jpg"></a>
                             </figure>
                         </div>
                         <div class="column has-text-centered">
@@ -110,7 +110,7 @@
 
     </section>
     <!-- choose a location -->
-    <section >
+    <section>
         <div id="location" class="columns">
             <div class="columns"></div>
             <div class="columns">
@@ -129,15 +129,15 @@
                 <div class="column is-one-quarter"></div>
             </div>
         </div>
-      
-        
+
+
 
 
         <div id="modal-js-example" class="modal">
             <div class="modal-background"></div>
 
-            <div id = "boop" class="modal-content">
-                <div id ="boop-bg" class="box">
+            <div id="boop" class="modal-content">
+                <div id="boop-bg" class="box">
                     <div class="columns"></div>
                     <div class="column">
                         <p>
@@ -157,24 +157,25 @@
                     <div class="column"></div>
                     <div class="columns">
                         <div class="column"></div>
-                        <div class="column is-one-fifth"><button id="search" class="button is-primary">Search</button></div>
+                        <div class="column is-one-fifth"><button id="search" class="button is-primary">Search</button>
+                        </div>
                         <div class="column"></div>
                     </div>
                 </div>
             </div>
-            <div id ="loading" class="modal-content">
+            <div id="loading" class="modal-content">
                 <div id="loading-bg" class="box">
                     <div class="columns"></div>
                     <div class="column">
                         <!-- loading bar here -->
                         <p>
-                            <progress id = "waitroom" class="progress is-link" value="0" max="100">0%</progress>
+                            <progress id="waitroom" class="progress is-link" value="0" max="100">0%</progress>
                         </p>
                     </div>
                     <div class="column"></div>
 
                     <div class="column"></div>
-                    <div class="columns">   
+                    <div class="columns">
                     </div>
                 </div>
             </div>
@@ -183,7 +184,7 @@
         </div>
 
     </section>
-      
+
     <br>
     <!-- this is the end of the browsing code  -->
 
@@ -235,9 +236,11 @@
         </div>
     </section>
     <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
-    <script src="./js/script.js"></script>    
+    <script src="./assets/js/sincScript.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTQVOisLUpvEpoW30CiZlKlPdNMUiX8J4&libraries=places"></script>
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTQVOisLUpvEpoW30CiZlKlPdNMUiX8J4&libraries=localContext,places&v=beta&callback=initMap">
+        </script>
     <script>
         bulmaCarousel.attach('#slider', {
             slidesToScroll: 1,
@@ -246,7 +249,7 @@
             autoplay: true,
         });
     </script>
-    
+
 </body>
 
 </html>
