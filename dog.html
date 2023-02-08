@@ -25,7 +25,6 @@
     <!-- carousell of rotating pet images -->
     <div class="slideshow-container">
 
-
         <div class="mySlides fade">
           <div class="numbertext"></div>
           <img src="assets/imgs/Dog highq 1.jpg" style="width:100%" >
@@ -57,11 +56,30 @@
         <br>
         <!-- Start of the area that the api will work its magic within-->
 <div class="container" id="big-box">
-    <div class="top" id="big-box-title">
-<h1 style="font-size: 40px;"><center><u>Adopt your fuzzy companion Now!!!</u></center></h1>
+    <div id="big-box-title">
+        <h1 style="font-size: 40px;"><center><u>Adopt your fuzzy companion Now!!!</u></center></h1>
     </div>
-    <div class="container" id="small-box">
-        <!-- ADD A PLACE FOR THE API TO PLUG IN THE INFORMATION-->
+<div id="small-box">
+ <!-- A PLACE FOR THE API TO PLUG IN THE INFORMATION-->
+    <div class="container is-fluid is-full">  
+         <div class="has-background-white content is-large has-text-centered">
+<h2 id="petname" class="petname pt-4 mt-4 mb-4">Pet Name Here</h2> <!--append pet name in JS -->
+            <div class="profilePIC">
+<img id="petPics" class="imgCSS" src="https://i.pinimg.com/564x/da/b7/38/dab73866272e40a81449617dc96bf58e.jpg">
+            </div>
+        </div>
+        <!-----------------------------  Pet Information ---------------------------->   
+        <div class = "container">
+             <ul class="tabs is-centered"> <!--append child here in JS-->
+                <li id="breed"> Breed</li>
+                <li id="age"> Age </li>
+                <li id="gender"> Gender </li>
+                <li id="location"> Location</li>
+         </div>
+    </div>
+</div>
+    <div id="small-box">
+        <!-- A PLACE FOR THE API TO PLUG IN THE INFORMATION-->
         <div class="container is-fluid is-full">  
             <div class="has-background-white content is-large has-text-centered">
                         <h2 id="petname" class="petname pt-4 mt-4 mb-4">Pet Name Here</h2> <!--append pet name in JS -->
@@ -78,13 +96,12 @@
                     </div>
             </div>
         </div>
-
-        <!----------------------------- Story Detail Section ---------------------------->
-
     </div>
 </div>
-<script src="C:\Users\rylie\bootcamp\Paw_Power\assets\js\eugin.js"></script>
-<script src="assets/js/script-r.js"></script>
+
+</div> <!-- big box div-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="assets/js/Script2.js"></script>
 <script src="assets/js/script.js"></script>
 </body>
 </html>
