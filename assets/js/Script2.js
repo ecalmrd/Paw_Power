@@ -16,7 +16,31 @@ var ageEl = $('#age');
 var genderEl = $('#gender');
 var colorEl = $('#color');
 var locationEl = $('#location');
-var animalPhotosArray;
+
+
+
+
+var petPics1 = $('#petPics1');
+var petNameEl1 = $('#petname1');
+var breedEl1 = $('#breed1');
+var ageEl1 = $('#age1');
+var genderEl1 = $('#gender1');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //organization's contact information variables
 var orgnameEl = $('#orgName');
@@ -67,6 +91,27 @@ fetchData = () => {
                     petNameEl.text(data.animals[0].name)
                     story.text(data.animals[0].description)
 
+
+
+
+                    breedEl1.text(data.animals[1].breeds.primary)
+                    ageEl1.text(data.animals[1].age)
+                    genderEl1.text(data.animals[1].gender)
+                    petNameEl1.text(data.animals[1].name)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     replacePlaceholder(data) //function to replace image place holder to pet's profile image
                     colorGender(data) //function to add color to profile based on pet's gender
                 });
@@ -102,20 +147,13 @@ fetchData();
 function replacePlaceholder(data) {
     if (data.animals[0].photos[0].full) {
         petPics.attr('src', data.animals[0].photos[0].full);
+        petPics1.attr('src', data.animals[1].photos[0].full);
         console.log(data.animals[0].photos[0].full)
     }
-};
+}
 
-//function to add color to profile based on pet's gender
-function colorGender(data) {
-    var profileContainer = $('#profileContainer');
-    if (data.animals[0].gender === "Male") {
-        console.log(data.animals[0].gender)
-        profileContainer.addClass('has-background-info-light')
-    } else {
-        profileContainer.addClass('has-background-danger-light')
-    }
-};
+
+
 
 // Function to navigate additional pet's images
 var nextButton = $('#nextBtn');
