@@ -70,8 +70,27 @@ var breedEl8 = $('#breed8');
 var ageEl8 = $('#age8');
 var genderEl8 = $('#gender8');
 //  8  //
-
-
+//  9  //
+var petPics9 = $('#petPics9');
+var petNameEl9 = $('#petname9');
+var breedEl9 = $('#breed9');
+var ageEl9 = $('#age9');
+var genderEl9 = $('#gender9');
+//  9  //
+//  10 //
+var petPics10 = $('#petPics10');
+var petNameEl10 = $('#petname10');
+var breedEl10 = $('#breed10');
+var ageEl10 = $('#age10');
+var genderEl10 = $('#gender10');
+//  10  //
+//  11  //
+var petPics11 = $('#petPics11');
+var petNameEl11 = $('#petname11');
+var breedEl11 = $('#breed11');
+var ageEl11 = $('#age11');
+var genderEl11 = $('#gender11');
+//  11  //
 
 
 
@@ -170,7 +189,21 @@ fetchData = () => {
                     ageEl8.text(data.animals[8].age)
                     genderEl8.text(data.animals[8].gender)
                     petNameEl8.text(data.animals[8].name)
+                    
+                    breedEl9.text(data.animals[9].breeds.primary)
+                    ageEl9.text(data.animals[9].age)
+                    genderEl9.text(data.animals[9].gender)
+                    petNameEl9.text(data.animals[9].name)
 
+                    breedEl10.text(data.animals[10].breeds.primary)
+                    ageEl10.text(data.animals[10].age)
+                    genderEl10.text(data.animals[10].gender)
+                    petNameEl10.text(data.animals[10].name)
+
+                    breedEl11.text(data.animals[11].breeds.primary)
+                    ageEl11.text(data.animals[11].age)
+                    genderEl11.text(data.animals[11].gender)
+                    petNameEl11.text(data.animals[11].name)
 
 
 
@@ -244,7 +277,20 @@ function replacePlaceholder(data) {
         petPics8.attr('src', data.animals[8].photos[0].full);
         console.log(data.animals[0].photos[0].full)
     }
+    if (data.animals[9].photos.length > 0) {
+        petPics9.attr('src', data.animals[9].photos[0].full);
+        console.log(data.animals[0].photos[0].full)
+    }
+    if (data.animals[10].photos.length > 0) {
+        petPics10.attr('src', data.animals[10].photos[0].full);
+        console.log(data.animals[0].photos[0].full)
+    }
+    if (data.animals[11].photos.length > 0) {
+        petPics11.attr('src', data.animals[11].photos[0].full);
+        console.log(data.animals[0].photos[0].full)
+    }
 }
+
 
 
 

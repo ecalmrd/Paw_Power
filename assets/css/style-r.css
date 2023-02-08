@@ -270,5 +270,6 @@ button:hover, a:hover {
 
 
 #big-box {
-  padding: 20vw;
+  margin-left: 10vw;
+  margin-right: 7.5vw;
 }
