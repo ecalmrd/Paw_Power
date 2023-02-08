@@ -11,6 +11,12 @@
     background-color: --bg-color;
 }
 
+#paw{
+    border: 1px;
+    border-color: black;
+
+}
+
 #catbutton:hover,
 #dogbutton:hover,
 #petbutton:hover {
