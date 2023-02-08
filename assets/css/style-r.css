@@ -228,20 +228,41 @@ img {vertical-align: middle;}
   .prev, .next,.text {font-size: 11px}
 }
 /* END OF CODE FROM THE CAROUSEL */
-#big-box-title{
-    background:white ;
-    color:black;
-}
-#big-box {
-    background: white;
-    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-}
-#small-box {
-  flex-shrink: 1;
-    border-radius: 25px;
-  background: #E6DBac; /*this is a placeholder color currently its an ugly yellow for testing purposes*/
+
+
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
   text-align: center;
+  font-family: arial;
 }
 
+.title {
+  color: grey;
+  font-size: 18px;
+}
 
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
 
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
