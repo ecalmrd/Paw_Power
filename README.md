@@ -1,6 +1,6 @@
 ## Paw_Power
 
-## PROJECT DESCRIPTION
+## Project Description
 A pet adoption web page with swipe function.
 
 ## APIs Used
