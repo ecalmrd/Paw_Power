@@ -7,6 +7,9 @@ A pet adoption web page with swipe function.
 Bulma CSS Framework
 https://bulma.io/  
 
+Paw Power  
+https://ecalmrd.github.io/Paw_Power/
+
 Petfinder  
 https://www.petfinder.com/developers/v2/docs/#get-animal-types
 
