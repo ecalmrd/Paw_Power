@@ -3,8 +3,8 @@
 ## Project Description
 A pet adoption web page with swipe function.
 
-## APIs Used
-Bulma API  
+## APIs/Technologies Used
+Bulma CSS Framework
 https://bulma.io/  
 
 Petfinder  
