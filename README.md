@@ -17,9 +17,6 @@ THEN I am taken to the available pets
 WHEN I choose a pet  
 THEN I am taken to the pet profile  
 
-## Wireframe or Sketch of the Design (yasmin) - 
-
-Mobile first (flex out) 
 
 ## APIs Used
 
