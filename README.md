@@ -10,6 +10,6 @@ https://bulma.io/
 Petfinder  
 https://www.petfinder.com/developers/v2/docs/#get-animal-types
 
-GooglemapsAPI  
+GoogleMaps API  
 https://developers.google.com/maps/documentation/javascript/overview
 
