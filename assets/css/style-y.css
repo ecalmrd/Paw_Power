@@ -7,6 +7,10 @@
      
 }
 
+
+.card1 {
+  object-fit: contain;
+}
   
   body {
     margin-top:0px;

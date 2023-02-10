@@ -1,32 +1,16 @@
-# Paw_Power
-## PROJECT DESCRIPTION
-As a potential pet owner   
-I would like to search for available pets for adoption near a selected location.
+## Paw_Power
+https://ecalmrd.github.io/Paw_Power/  
 
-## USER STORY 
+## Project Description
+A pet adoption web page with swipe function.
 
-As a potential pet owner.  
-I would like a web application where I can look at adopatable pets  
-So that I can find my fur-ever friend.
+## APIs/Technologies Used
+Bulma CSS Framework  
+https://bulma.io/  
 
-## ACCEPTANCE CRITERIA
-
-GIVEN a location  
-WHEN I choose a cat or dog  
-THEN I am taken to the available pets  
-WHEN I choose a pet  
-THEN I am taken to the pet profile  
-
-
-## APIs Used
-
-mui
-bulma
-
-petfinder
+Petfinder  
 https://www.petfinder.com/developers/v2/docs/#get-animal-types
 
-googlemaps
+GoogleMaps API  
 https://developers.google.com/maps/documentation/javascript/overview
-
 
