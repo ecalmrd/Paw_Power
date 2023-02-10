@@ -1,11 +1,8 @@
 ## Paw_Power
+https://ecalmrd.github.io/Paw_Power/  
 
 ## Project Description
 A pet adoption web page with swipe function.
-
-
-Paw Power  
-https://ecalmrd.github.io/Paw_Power/  
 
 ## APIs/Technologies Used
 Bulma CSS Framework  
