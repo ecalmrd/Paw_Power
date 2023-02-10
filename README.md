@@ -3,12 +3,13 @@
 ## Project Description
 A pet adoption web page with swipe function.
 
-## APIs/Technologies Used
-Bulma CSS Framework
-https://bulma.io/  
 
 Paw Power  
-https://ecalmrd.github.io/Paw_Power/
+https://ecalmrd.github.io/Paw_Power/  
+
+## APIs/Technologies Used
+Bulma CSS Framework  
+https://bulma.io/  
 
 Petfinder  
 https://www.petfinder.com/developers/v2/docs/#get-animal-types
